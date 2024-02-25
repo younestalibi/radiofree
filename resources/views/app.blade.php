@@ -17,6 +17,7 @@
         @inertiaHead
     </head>
     <body class="font-sans antialiased">
+        <div id="root"></div>
         @inertia
     </body>
 </html>
