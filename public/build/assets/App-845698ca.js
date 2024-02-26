@@ -1,0 +1,10 @@
+import{r as e,e as b,a as o,j as F}from"./app-b6269d6d.js";import U from"./Home-220a175a.js";import{c as d,R as w,a as v,b as l}from"./index-d58e1667.js";import y from"./Stream-9512801b.js";import"./AgoraRTC_N-production-3625f1f1.js";import"./hoist-non-react-statics.cjs-de9427b3.js";import"./assertThisInitialized-e0ac5d73.js";import"./Room-639056f0.js";import"./Typography-670da8cd.js";import"./interopRequireDefault-01ffd8a5.js";import"./Paper-49cf0c91.js";import"./CardMedia-accca5d0.js";import"./Navbar-bf83790c.js";import"./useTheme-b7360ec3.js";import"./ButtonBase-b387d501.js";import"./TransitionGroup-ff8db29b.js";import"./Footer-7888bbe0.js";import"./createSvgIcon-c9c5352f.js";import"./Loading-67cd310f.js";import"./VideoCall-a9fc8eef.js";import"./Controls-6a3ab7f2.js";import"./index.modern-98cb0883.js";import"./Video-ba40b42c.js";import"./Button-552cf6bd.js";/**
+ * React Router DOM v6.22.1
+ *
+ * Copyright (c) Remix Software Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
+ */const E="6";try{window.__reactRouterVersion=E}catch{}const _="startTransition",p=b[_];function I(t){let{basename:S,children:R,future:n,window:T}=t,i=e.useRef();i.current==null&&(i.current=d({window:T,v5Compat:!0}));let r=i.current,[a,s]=e.useState({action:r.action,location:r.location}),{v7_startTransition:m}=n||{},c=e.useCallback(u=>{m&&p?p(()=>s(u)):s(u)},[s,m]);return e.useLayoutEffect(()=>r.listen(c),[r,c]),e.createElement(w,{basename:S,children:R,location:a.location,navigationType:a.action,navigator:r,future:n})}var f;(function(t){t.UseScrollRestoration="useScrollRestoration",t.UseSubmit="useSubmit",t.UseSubmitFetcher="useSubmitFetcher",t.UseFetcher="useFetcher",t.useViewTransitionState="useViewTransitionState"})(f||(f={}));var h;(function(t){t.UseFetcher="useFetcher",t.UseFetchers="useFetchers",t.UseScrollRestoration="useScrollRestoration"})(h||(h={}));function k(){return e.useState(!1),o(I,{children:F(v,{children:[o(l,{path:"/",element:o(U,{})}),o(l,{path:"/room/:room",element:o(y,{})})]})})}export{k as default};
