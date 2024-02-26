@@ -24,7 +24,7 @@ const Audio = () => {
                 xiriir emailka radiofreesom@gmail.com
             </marquee>
             <div className="container-audio">
-                <div style={{ width: "40%" }}>
+                <div style={{ minWidth: "40%" }}>
                     <div className="logo">
                         <img src={logo} alt="" />
                         <b>radiofreesom.com</b>

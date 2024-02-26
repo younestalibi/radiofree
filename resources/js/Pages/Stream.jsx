@@ -18,7 +18,6 @@ const Stream = () => {
     const location = useLocation();
     // const { password } = location.state;
     // console.log(password);
-    console.log(location);
     const [openPopup, setOpenPopup] = useState(true);
     const [enteredValue, setEnteredValue] = useState("");
     const [open, setOpen] = useState(true);
@@ -56,7 +55,6 @@ const Stream = () => {
             axios
               .post(`${import.meta.env.VITE_BACKEND_URL}/api/verify`, postData)
               .then((response) => {
-                console.log(response.data.answer)
                 if (response.data.answer) {
                   setPermission(true);
                   handleClose(!open);
