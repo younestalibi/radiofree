@@ -61,7 +61,7 @@ class RoomController extends Controller
         ];
 
         foreach ($emailArray as $email) {
-            Mail::to($email)->send(new Invetation($data));
+            Mail::to($email)->queue(new Invetation($data));
         }
         return redirect()->back()->with('success', 'Room updated successfully.');
     }
