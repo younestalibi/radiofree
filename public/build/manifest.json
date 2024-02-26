@@ -204,6 +204,11 @@
     "file": "assets/bootstrap-icons-476adf42.woff2",
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
+  "resources/css/app.css": {
+    "file": "assets/app-47ab8113.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
   "resources/js/Pages/Alert.jsx": {
     "file": "assets/Alert-5beffafd.js",
     "imports": [
