@@ -1,1 +1,0 @@
-import{a as s,j as a}from"./app-b6269d6d.js";const o=()=>s("div",{className:"cssload-container",children:s("ul",{className:"cssload-flex-container",children:a("li",{children:[s("span",{className:"cssload-loading cssload-one"}),s("span",{className:"cssload-loading cssload-two"}),s("span",{className:"cssload-loading-center"})]})})});export{o as default};

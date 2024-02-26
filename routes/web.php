@@ -19,6 +19,9 @@ use App\Http\Controllers\RoomController;
 Route::get('/', function () {
     return Inertia::render('main');
 });
+Route::get('/rooms', function () {
+    return Inertia::render('main');
+});
 Route::get('/room/{id}', function () {
     return Inertia::render('main');
 });

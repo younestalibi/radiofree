@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Home from "./Home";
 import { BrowserRouter as Router, Route, Routes, useParams } from 'react-router-dom';
 import Stream from "./Stream";
+import Audio from "./Audio";
 
 
 function App() {
@@ -35,7 +36,8 @@ function App() {
     <Router>
       <Routes>
         {/* Route for / with or without query parameter */}
-        <Route path="/"  element={<Home/>} />
+        <Route path="/"  element={<Audio/>} />
+        <Route path="/rooms"  element={<Home/>} />
         <Route path="/room/:room"  element={<Stream/>} />
 
         {/* Add more routes as needed */}
