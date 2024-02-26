@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@mui/material";
 import axios from "axios";
 import Loading from "./Loading";
-import Audio from './Audio'
+import Audio from "./Audio";
 const Home = ({ inCall, setChannelName, setInCall }) => {
     const handleRoomChange = () => {
         setInCall(!inCall);
@@ -81,28 +81,42 @@ const Home = ({ inCall, setChannelName, setInCall }) => {
     return (
         <>
             <Navbar />
-            {!loading == true ? (
+            {loading ? (
+                <Loading />
+            ) : rooms.length > 0 ? (
                 <Grid style={{ padding: "40px" }} container spacing={4}>
-                    {rooms &&
-                        rooms.map((room, i) => (
-                            <Grid key={i} item xs={12} sm={6} md={3}>
-                                <Room
-                                    // setChannelName={setChannelName}
-                                    inCall={inCall}
-                                    setInCall={setInCall}
-                                    // image={`${room.image}`}
-                                    image={`${import.meta.env.VITE_BACKEND_URL}/storage/${room.image}`}
-                                    password={room.password}
-                                    created={room.created_at}
-                                    name={room.name}
-                                    description={room.description}
-                                />
-                            </Grid>
-                        ))}
+                    {rooms.map((room, i) => (
+                        <Grid key={i} item xs={12} sm={6} md={3}>
+                            <Room
+                                inCall={inCall}
+                                setInCall={setInCall}
+                                image={`${
+                                    import.meta.env.VITE_BACKEND_URL
+                                }/storage/${room.image}`}
+                                password={room.password}
+                                created={room.created_at}
+                                name={room.name}
+                                description={room.description}
+                            />
+                        </Grid>
+                    ))}
                 </Grid>
             ) : (
-                <Loading />
+                <div
+                    style={{
+                        height: "70vh",
+                        color: "white",
+                        fontWeight: "bolder",
+                        fontSize: "30px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                    }}
+                >
+                    Not found
+                </div>
             )}
+
             <Footer />
         </>
     );
