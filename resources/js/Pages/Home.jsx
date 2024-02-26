@@ -61,7 +61,7 @@ const Home = ({ inCall, setChannelName, setInCall }) => {
     ]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    console.log(import.meta.env.VITE_PUSHER_PORT);
+
     useEffect(() => {
         const fetchData = async () => {
             try {
