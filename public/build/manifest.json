@@ -3,146 +3,146 @@
     "file": "assets/Audio-b4f1ec3b.css",
     "src": "Audio.css"
   },
-  "_AgoraRTC_N-production-2aaa42b4.js": {
-    "file": "assets/AgoraRTC_N-production-2aaa42b4.js",
+  "_AgoraRTC_N-production-e8172291.js": {
+    "file": "assets/AgoraRTC_N-production-e8172291.js",
     "imports": [
-      "_hoist-non-react-statics.cjs-c4f441ae.js",
+      "_hoist-non-react-statics.cjs-8e4377cf.js",
       "resources/js/app.jsx",
       "_createClass-5d1a4de6.js",
       "_assertThisInitialized-a147f0d7.js"
     ]
   },
-  "_ApplicationLogo-8c047e0f.js": {
-    "file": "assets/ApplicationLogo-8c047e0f.js",
+  "_ApplicationLogo-cf015dfc.js": {
+    "file": "assets/ApplicationLogo-cf015dfc.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_Audio-db659920.js": {
+  "_Audio-215ab36b.js": {
     "css": [
       "assets/Audio-b4f1ec3b.css"
     ],
-    "file": "assets/Audio-db659920.js",
+    "file": "assets/Audio-215ab36b.js",
     "imports": [
       "_createClass-5d1a4de6.js",
       "_assertThisInitialized-a147f0d7.js",
       "resources/js/app.jsx",
-      "_hoist-non-react-statics.cjs-c4f441ae.js"
+      "_hoist-non-react-statics.cjs-8e4377cf.js"
     ]
   },
-  "_AuthenticatedLayout-ed6ec880.js": {
-    "file": "assets/AuthenticatedLayout-ed6ec880.js",
+  "_AuthenticatedLayout-8e0eb06c.js": {
+    "file": "assets/AuthenticatedLayout-8e0eb06c.js",
     "imports": [
       "resources/js/app.jsx",
-      "_ApplicationLogo-8c047e0f.js",
-      "_transition-c02d6845.js"
+      "_ApplicationLogo-cf015dfc.js",
+      "_transition-fecf6221.js"
     ]
   },
-  "_Button-cdd047b2.js": {
-    "file": "assets/Button-cdd047b2.js",
+  "_Button-f5262f02.js": {
+    "file": "assets/Button-f5262f02.js",
     "imports": [
-      "_hoist-non-react-statics.cjs-c4f441ae.js",
+      "_hoist-non-react-statics.cjs-8e4377cf.js",
       "resources/js/app.jsx",
-      "_Typography-c71d19cf.js",
-      "_useTheme-d3f7b7a8.js",
-      "_ButtonBase-a8f2d70e.js",
-      "_Paper-fc7ff9ae.js",
-      "_createSvgIcon-5c9483b2.js"
+      "_Typography-77c9b61f.js",
+      "_useTheme-150e49aa.js",
+      "_ButtonBase-c384509e.js",
+      "_Paper-39de4f69.js",
+      "_createSvgIcon-62300411.js"
     ]
   },
-  "_ButtonBase-a8f2d70e.js": {
-    "file": "assets/ButtonBase-a8f2d70e.js",
+  "_ButtonBase-c384509e.js": {
+    "file": "assets/ButtonBase-c384509e.js",
     "imports": [
       "resources/js/app.jsx",
-      "_hoist-non-react-statics.cjs-c4f441ae.js",
-      "_Typography-c71d19cf.js",
-      "_useTheme-d3f7b7a8.js",
+      "_hoist-non-react-statics.cjs-8e4377cf.js",
+      "_Typography-77c9b61f.js",
+      "_useTheme-150e49aa.js",
       "_assertThisInitialized-a147f0d7.js",
-      "_TransitionGroup-ac9ce4eb.js"
+      "_TransitionGroup-9d6ff295.js"
     ]
   },
-  "_CardMedia-98c2ad16.js": {
-    "file": "assets/CardMedia-98c2ad16.js",
+  "_CardMedia-53138e20.js": {
+    "file": "assets/CardMedia-53138e20.js",
     "imports": [
-      "_hoist-non-react-statics.cjs-c4f441ae.js",
+      "_hoist-non-react-statics.cjs-8e4377cf.js",
       "resources/js/app.jsx",
-      "_Typography-c71d19cf.js"
+      "_Typography-77c9b61f.js"
     ]
   },
-  "_Controls-67d78bd6.js": {
-    "file": "assets/Controls-67d78bd6.js",
+  "_Controls-8c8afcdb.js": {
+    "file": "assets/Controls-8c8afcdb.js",
     "imports": [
       "resources/js/app.jsx",
-      "_index.modern-d1ba5661.js",
+      "_index.modern-71f118cb.js",
       "_interopRequireDefault-01ffd8a5.js",
-      "_AgoraRTC_N-production-2aaa42b4.js",
-      "_hoist-non-react-statics.cjs-c4f441ae.js",
-      "_index-16c32b35.js",
-      "_TransitionGroup-ac9ce4eb.js"
+      "_AgoraRTC_N-production-e8172291.js",
+      "_hoist-non-react-statics.cjs-8e4377cf.js",
+      "_index-9ce575e4.js",
+      "_TransitionGroup-9d6ff295.js"
     ],
     "isDynamicEntry": true
   },
-  "_GuestLayout-16733837.js": {
-    "file": "assets/GuestLayout-16733837.js",
+  "_GuestLayout-74436fe0.js": {
+    "file": "assets/GuestLayout-74436fe0.js",
     "imports": [
       "resources/js/app.jsx",
-      "_ApplicationLogo-8c047e0f.js"
+      "_ApplicationLogo-cf015dfc.js"
     ]
   },
-  "_InputLabel-a8ae8799.js": {
-    "file": "assets/InputLabel-a8ae8799.js",
+  "_InputLabel-987e86c5.js": {
+    "file": "assets/InputLabel-987e86c5.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_Navbar-bab0c501.js": {
+  "_Navbar-34552ba8.js": {
     "assets": [
       "assets/logo-ebb0f0d9.png"
     ],
-    "file": "assets/Navbar-bab0c501.js",
+    "file": "assets/Navbar-34552ba8.js",
     "imports": [
       "resources/js/app.jsx",
-      "_hoist-non-react-statics.cjs-c4f441ae.js",
-      "_Typography-c71d19cf.js",
-      "_Paper-fc7ff9ae.js",
-      "_CardMedia-98c2ad16.js",
-      "_useTheme-d3f7b7a8.js",
-      "_ButtonBase-a8f2d70e.js"
+      "_hoist-non-react-statics.cjs-8e4377cf.js",
+      "_Typography-77c9b61f.js",
+      "_Paper-39de4f69.js",
+      "_CardMedia-53138e20.js",
+      "_useTheme-150e49aa.js",
+      "_ButtonBase-c384509e.js"
     ],
     "isDynamicEntry": true
   },
-  "_Paper-fc7ff9ae.js": {
-    "file": "assets/Paper-fc7ff9ae.js",
+  "_Paper-39de4f69.js": {
+    "file": "assets/Paper-39de4f69.js",
     "imports": [
-      "_hoist-non-react-statics.cjs-c4f441ae.js",
+      "_hoist-non-react-statics.cjs-8e4377cf.js",
       "resources/js/app.jsx",
-      "_Typography-c71d19cf.js"
+      "_Typography-77c9b61f.js"
     ]
   },
-  "_PrimaryButton-46257b4c.js": {
-    "file": "assets/PrimaryButton-46257b4c.js",
+  "_PrimaryButton-933cb4da.js": {
+    "file": "assets/PrimaryButton-933cb4da.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_TextInput-b51b4be3.js": {
-    "file": "assets/TextInput-b51b4be3.js",
+  "_TextInput-77e406fb.js": {
+    "file": "assets/TextInput-77e406fb.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_TransitionGroup-ac9ce4eb.js": {
-    "file": "assets/TransitionGroup-ac9ce4eb.js",
+  "_TransitionGroup-9d6ff295.js": {
+    "file": "assets/TransitionGroup-9d6ff295.js",
     "imports": [
-      "_hoist-non-react-statics.cjs-c4f441ae.js",
+      "_hoist-non-react-statics.cjs-8e4377cf.js",
       "_assertThisInitialized-a147f0d7.js",
       "resources/js/app.jsx"
     ]
   },
-  "_Typography-c71d19cf.js": {
-    "file": "assets/Typography-c71d19cf.js",
+  "_Typography-77c9b61f.js": {
+    "file": "assets/Typography-77c9b61f.js",
     "imports": [
-      "_hoist-non-react-statics.cjs-c4f441ae.js",
+      "_hoist-non-react-statics.cjs-8e4377cf.js",
       "resources/js/app.jsx",
       "_interopRequireDefault-01ffd8a5.js"
     ]
@@ -153,47 +153,47 @@
   "_createClass-5d1a4de6.js": {
     "file": "assets/createClass-5d1a4de6.js"
   },
-  "_createSvgIcon-5c9483b2.js": {
-    "file": "assets/createSvgIcon-5c9483b2.js",
+  "_createSvgIcon-62300411.js": {
+    "file": "assets/createSvgIcon-62300411.js",
     "imports": [
-      "_hoist-non-react-statics.cjs-c4f441ae.js",
+      "_hoist-non-react-statics.cjs-8e4377cf.js",
       "resources/js/app.jsx",
-      "_Typography-c71d19cf.js"
+      "_Typography-77c9b61f.js"
     ]
   },
-  "_hoist-non-react-statics.cjs-c4f441ae.js": {
-    "file": "assets/hoist-non-react-statics.cjs-c4f441ae.js",
+  "_hoist-non-react-statics.cjs-8e4377cf.js": {
+    "file": "assets/hoist-non-react-statics.cjs-8e4377cf.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_index-16c32b35.js": {
-    "file": "assets/index-16c32b35.js",
+  "_index-9ce575e4.js": {
+    "file": "assets/index-9ce575e4.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_index.modern-d1ba5661.js": {
-    "file": "assets/index.modern-d1ba5661.js",
+  "_index.modern-71f118cb.js": {
+    "file": "assets/index.modern-71f118cb.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AgoraRTC_N-production-2aaa42b4.js"
+      "_AgoraRTC_N-production-e8172291.js"
     ]
   },
   "_interopRequireDefault-01ffd8a5.js": {
     "file": "assets/interopRequireDefault-01ffd8a5.js"
   },
-  "_transition-c02d6845.js": {
-    "file": "assets/transition-c02d6845.js",
+  "_transition-fecf6221.js": {
+    "file": "assets/transition-fecf6221.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
-  "_useTheme-d3f7b7a8.js": {
-    "file": "assets/useTheme-d3f7b7a8.js",
+  "_useTheme-150e49aa.js": {
+    "file": "assets/useTheme-150e49aa.js",
     "imports": [
       "resources/js/app.jsx",
-      "_Typography-c71d19cf.js"
+      "_Typography-77c9b61f.js"
     ]
   },
   "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
@@ -205,206 +205,206 @@
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-47ab8113.css",
+    "file": "assets/app-b9b83cf0.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
   "resources/js/Pages/Alert.jsx": {
-    "file": "assets/Alert-5beffafd.js",
+    "file": "assets/Alert-d581dd4b.js",
     "imports": [
       "resources/js/app.jsx",
-      "_Button-cdd047b2.js",
-      "_hoist-non-react-statics.cjs-c4f441ae.js",
-      "_Typography-c71d19cf.js",
+      "_Button-f5262f02.js",
+      "_hoist-non-react-statics.cjs-8e4377cf.js",
+      "_Typography-77c9b61f.js",
       "_interopRequireDefault-01ffd8a5.js",
-      "_useTheme-d3f7b7a8.js",
-      "_ButtonBase-a8f2d70e.js",
+      "_useTheme-150e49aa.js",
+      "_ButtonBase-c384509e.js",
       "_assertThisInitialized-a147f0d7.js",
-      "_TransitionGroup-ac9ce4eb.js",
-      "_Paper-fc7ff9ae.js",
-      "_createSvgIcon-5c9483b2.js"
+      "_TransitionGroup-9d6ff295.js",
+      "_Paper-39de4f69.js",
+      "_createSvgIcon-62300411.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Alert.jsx"
   },
   "resources/js/Pages/App.jsx": {
-    "file": "assets/App-74b7531f.js",
+    "file": "assets/App-d64fb5f6.js",
     "imports": [
       "resources/js/app.jsx",
       "resources/js/Pages/Home.jsx",
-      "_index-16c32b35.js",
+      "_index-9ce575e4.js",
       "resources/js/Pages/Stream.jsx",
       "resources/js/Pages/Audio.jsx",
-      "_AgoraRTC_N-production-2aaa42b4.js",
-      "_hoist-non-react-statics.cjs-c4f441ae.js",
+      "_AgoraRTC_N-production-e8172291.js",
+      "_hoist-non-react-statics.cjs-8e4377cf.js",
       "_createClass-5d1a4de6.js",
       "_assertThisInitialized-a147f0d7.js",
       "resources/js/Pages/Room.jsx",
-      "_Typography-c71d19cf.js",
+      "_Typography-77c9b61f.js",
       "_interopRequireDefault-01ffd8a5.js",
-      "_Paper-fc7ff9ae.js",
-      "_CardMedia-98c2ad16.js",
-      "_Navbar-bab0c501.js",
-      "_useTheme-d3f7b7a8.js",
-      "_ButtonBase-a8f2d70e.js",
-      "_TransitionGroup-ac9ce4eb.js",
+      "_Paper-39de4f69.js",
+      "_CardMedia-53138e20.js",
+      "_Navbar-34552ba8.js",
+      "_useTheme-150e49aa.js",
+      "_ButtonBase-c384509e.js",
+      "_TransitionGroup-9d6ff295.js",
       "resources/js/Pages/Footer.jsx",
-      "_createSvgIcon-5c9483b2.js",
+      "_createSvgIcon-62300411.js",
       "resources/js/Pages/Loading.jsx",
-      "_Audio-db659920.js",
+      "_Audio-215ab36b.js",
       "resources/js/Pages/VideoCall.jsx",
-      "_Controls-67d78bd6.js",
-      "_index.modern-d1ba5661.js",
+      "_Controls-8c8afcdb.js",
+      "_index.modern-71f118cb.js",
       "resources/js/Pages/Video.jsx",
-      "_Button-cdd047b2.js"
+      "_Button-f5262f02.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/App.jsx"
   },
   "resources/js/Pages/Audio.jsx": {
-    "file": "assets/Audio-8450304b.js",
+    "file": "assets/Audio-d68ee50b.js",
     "imports": [
       "resources/js/app.jsx",
-      "_Audio-db659920.js",
-      "_Navbar-bab0c501.js",
+      "_Audio-215ab36b.js",
+      "_Navbar-34552ba8.js",
       "resources/js/Pages/Footer.jsx",
-      "_index-16c32b35.js",
+      "_index-9ce575e4.js",
       "_createClass-5d1a4de6.js",
       "_assertThisInitialized-a147f0d7.js",
-      "_hoist-non-react-statics.cjs-c4f441ae.js",
-      "_Typography-c71d19cf.js",
+      "_hoist-non-react-statics.cjs-8e4377cf.js",
+      "_Typography-77c9b61f.js",
       "_interopRequireDefault-01ffd8a5.js",
-      "_Paper-fc7ff9ae.js",
-      "_CardMedia-98c2ad16.js",
-      "_useTheme-d3f7b7a8.js",
-      "_ButtonBase-a8f2d70e.js",
-      "_TransitionGroup-ac9ce4eb.js",
-      "_createSvgIcon-5c9483b2.js"
+      "_Paper-39de4f69.js",
+      "_CardMedia-53138e20.js",
+      "_useTheme-150e49aa.js",
+      "_ButtonBase-c384509e.js",
+      "_TransitionGroup-9d6ff295.js",
+      "_createSvgIcon-62300411.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Audio.jsx"
   },
   "resources/js/Pages/Auth/ConfirmPassword.jsx": {
-    "file": "assets/ConfirmPassword-a3f9112f.js",
+    "file": "assets/ConfirmPassword-310b8031.js",
     "imports": [
       "resources/js/app.jsx",
-      "_GuestLayout-16733837.js",
-      "_TextInput-b51b4be3.js",
-      "_InputLabel-a8ae8799.js",
-      "_PrimaryButton-46257b4c.js",
-      "_ApplicationLogo-8c047e0f.js"
+      "_GuestLayout-74436fe0.js",
+      "_TextInput-77e406fb.js",
+      "_InputLabel-987e86c5.js",
+      "_PrimaryButton-933cb4da.js",
+      "_ApplicationLogo-cf015dfc.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/ConfirmPassword.jsx"
   },
   "resources/js/Pages/Auth/ForgotPassword.jsx": {
-    "file": "assets/ForgotPassword-b88e4f24.js",
+    "file": "assets/ForgotPassword-4acde70f.js",
     "imports": [
       "resources/js/app.jsx",
-      "_GuestLayout-16733837.js",
-      "_TextInput-b51b4be3.js",
-      "_PrimaryButton-46257b4c.js",
-      "_ApplicationLogo-8c047e0f.js"
+      "_GuestLayout-74436fe0.js",
+      "_TextInput-77e406fb.js",
+      "_PrimaryButton-933cb4da.js",
+      "_ApplicationLogo-cf015dfc.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/ForgotPassword.jsx"
   },
   "resources/js/Pages/Auth/Login.jsx": {
-    "file": "assets/Login-93761e6e.js",
+    "file": "assets/Login-d3f179b0.js",
     "imports": [
       "resources/js/app.jsx",
-      "_GuestLayout-16733837.js",
-      "_TextInput-b51b4be3.js",
-      "_InputLabel-a8ae8799.js",
-      "_PrimaryButton-46257b4c.js",
-      "_ApplicationLogo-8c047e0f.js"
+      "_GuestLayout-74436fe0.js",
+      "_TextInput-77e406fb.js",
+      "_InputLabel-987e86c5.js",
+      "_PrimaryButton-933cb4da.js",
+      "_ApplicationLogo-cf015dfc.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/Login.jsx"
   },
   "resources/js/Pages/Auth/Register.jsx": {
-    "file": "assets/Register-ed704158.js",
+    "file": "assets/Register-33924d28.js",
     "imports": [
       "resources/js/app.jsx",
-      "_GuestLayout-16733837.js",
-      "_TextInput-b51b4be3.js",
-      "_InputLabel-a8ae8799.js",
-      "_PrimaryButton-46257b4c.js",
-      "_ApplicationLogo-8c047e0f.js"
+      "_GuestLayout-74436fe0.js",
+      "_TextInput-77e406fb.js",
+      "_InputLabel-987e86c5.js",
+      "_PrimaryButton-933cb4da.js",
+      "_ApplicationLogo-cf015dfc.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/Register.jsx"
   },
   "resources/js/Pages/Auth/ResetPassword.jsx": {
-    "file": "assets/ResetPassword-a3e5c617.js",
+    "file": "assets/ResetPassword-a3ae6340.js",
     "imports": [
       "resources/js/app.jsx",
-      "_GuestLayout-16733837.js",
-      "_TextInput-b51b4be3.js",
-      "_InputLabel-a8ae8799.js",
-      "_PrimaryButton-46257b4c.js",
-      "_ApplicationLogo-8c047e0f.js"
+      "_GuestLayout-74436fe0.js",
+      "_TextInput-77e406fb.js",
+      "_InputLabel-987e86c5.js",
+      "_PrimaryButton-933cb4da.js",
+      "_ApplicationLogo-cf015dfc.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/ResetPassword.jsx"
   },
   "resources/js/Pages/Auth/VerifyEmail.jsx": {
-    "file": "assets/VerifyEmail-b5a8b7c6.js",
+    "file": "assets/VerifyEmail-f6b591d0.js",
     "imports": [
       "resources/js/app.jsx",
-      "_GuestLayout-16733837.js",
-      "_PrimaryButton-46257b4c.js",
-      "_ApplicationLogo-8c047e0f.js"
+      "_GuestLayout-74436fe0.js",
+      "_PrimaryButton-933cb4da.js",
+      "_ApplicationLogo-cf015dfc.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/VerifyEmail.jsx"
   },
   "resources/js/Pages/Dashboard.jsx": {
-    "file": "assets/Dashboard-b27111aa.js",
+    "file": "assets/Dashboard-955d0ae7.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-ed6ec880.js",
-      "_ApplicationLogo-8c047e0f.js",
-      "_transition-c02d6845.js"
+      "_AuthenticatedLayout-8e0eb06c.js",
+      "_ApplicationLogo-cf015dfc.js",
+      "_transition-fecf6221.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Dashboard.jsx"
   },
   "resources/js/Pages/Footer.jsx": {
-    "file": "assets/Footer-1988d718.js",
+    "file": "assets/Footer-cc9ccde4.js",
     "imports": [
       "resources/js/app.jsx",
-      "_Typography-c71d19cf.js",
-      "_hoist-non-react-statics.cjs-c4f441ae.js",
-      "_useTheme-d3f7b7a8.js",
-      "_createSvgIcon-5c9483b2.js",
+      "_Typography-77c9b61f.js",
+      "_hoist-non-react-statics.cjs-8e4377cf.js",
+      "_useTheme-150e49aa.js",
+      "_createSvgIcon-62300411.js",
       "_interopRequireDefault-01ffd8a5.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Footer.jsx"
   },
   "resources/js/Pages/Home.jsx": {
-    "file": "assets/Home-dedf3025.js",
+    "file": "assets/Home-1078f7e1.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AgoraRTC_N-production-2aaa42b4.js",
+      "_AgoraRTC_N-production-e8172291.js",
       "resources/js/Pages/Room.jsx",
-      "_Navbar-bab0c501.js",
+      "_Navbar-34552ba8.js",
       "resources/js/Pages/Footer.jsx",
       "resources/js/Pages/Loading.jsx",
-      "_Audio-db659920.js",
-      "_hoist-non-react-statics.cjs-c4f441ae.js",
+      "_Audio-215ab36b.js",
+      "_hoist-non-react-statics.cjs-8e4377cf.js",
       "_createClass-5d1a4de6.js",
       "_assertThisInitialized-a147f0d7.js",
-      "_index-16c32b35.js",
-      "_Typography-c71d19cf.js",
+      "_index-9ce575e4.js",
+      "_Typography-77c9b61f.js",
       "_interopRequireDefault-01ffd8a5.js",
-      "_Paper-fc7ff9ae.js",
-      "_CardMedia-98c2ad16.js",
-      "_useTheme-d3f7b7a8.js",
-      "_ButtonBase-a8f2d70e.js",
-      "_TransitionGroup-ac9ce4eb.js",
-      "_createSvgIcon-5c9483b2.js"
+      "_Paper-39de4f69.js",
+      "_CardMedia-53138e20.js",
+      "_useTheme-150e49aa.js",
+      "_ButtonBase-c384509e.js",
+      "_TransitionGroup-9d6ff295.js",
+      "_createSvgIcon-62300411.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Home.jsx"
@@ -417,7 +417,7 @@
     "css": [
       "assets/Loading-fc2e4d9b.css"
     ],
-    "file": "assets/Loading-5a3028bf.js",
+    "file": "assets/Loading-49895ac3.js",
     "imports": [
       "resources/js/app.jsx"
     ],
@@ -425,53 +425,53 @@
     "src": "resources/js/Pages/Loading.jsx"
   },
   "resources/js/Pages/Profile/Edit.jsx": {
-    "file": "assets/Edit-2c609edb.js",
+    "file": "assets/Edit-3efc1e7c.js",
     "imports": [
       "resources/js/app.jsx",
-      "_AuthenticatedLayout-ed6ec880.js",
+      "_AuthenticatedLayout-8e0eb06c.js",
       "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx",
       "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx",
       "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx",
-      "_ApplicationLogo-8c047e0f.js",
-      "_transition-c02d6845.js",
-      "_TextInput-b51b4be3.js",
-      "_InputLabel-a8ae8799.js",
-      "_PrimaryButton-46257b4c.js"
+      "_ApplicationLogo-cf015dfc.js",
+      "_transition-fecf6221.js",
+      "_TextInput-77e406fb.js",
+      "_InputLabel-987e86c5.js",
+      "_PrimaryButton-933cb4da.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Profile/Edit.jsx"
   },
   "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx": {
-    "file": "assets/DeleteUserForm-382da97f.js",
+    "file": "assets/DeleteUserForm-eaafbb02.js",
     "imports": [
       "resources/js/app.jsx",
-      "_TextInput-b51b4be3.js",
-      "_InputLabel-a8ae8799.js",
-      "_transition-c02d6845.js"
+      "_TextInput-77e406fb.js",
+      "_InputLabel-987e86c5.js",
+      "_transition-fecf6221.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx"
   },
   "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx": {
-    "file": "assets/UpdatePasswordForm-3d7a70f6.js",
+    "file": "assets/UpdatePasswordForm-104daac3.js",
     "imports": [
       "resources/js/app.jsx",
-      "_TextInput-b51b4be3.js",
-      "_InputLabel-a8ae8799.js",
-      "_PrimaryButton-46257b4c.js",
-      "_transition-c02d6845.js"
+      "_TextInput-77e406fb.js",
+      "_InputLabel-987e86c5.js",
+      "_PrimaryButton-933cb4da.js",
+      "_transition-fecf6221.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx"
   },
   "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx": {
-    "file": "assets/UpdateProfileInformationForm-32b1760b.js",
+    "file": "assets/UpdateProfileInformationForm-454add6d.js",
     "imports": [
       "resources/js/app.jsx",
-      "_TextInput-b51b4be3.js",
-      "_InputLabel-a8ae8799.js",
-      "_PrimaryButton-46257b4c.js",
-      "_transition-c02d6845.js"
+      "_TextInput-77e406fb.js",
+      "_InputLabel-987e86c5.js",
+      "_PrimaryButton-933cb4da.js",
+      "_transition-fecf6221.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx"
@@ -480,51 +480,51 @@
     "assets": [
       "assets/default-83e358fd.png"
     ],
-    "file": "assets/Room-3fe4a5b0.js",
+    "file": "assets/Room-b88211dd.js",
     "imports": [
       "resources/js/app.jsx",
-      "_index-16c32b35.js",
-      "_hoist-non-react-statics.cjs-c4f441ae.js",
-      "_Typography-c71d19cf.js",
-      "_Paper-fc7ff9ae.js",
-      "_CardMedia-98c2ad16.js",
+      "_index-9ce575e4.js",
+      "_hoist-non-react-statics.cjs-8e4377cf.js",
+      "_Typography-77c9b61f.js",
+      "_Paper-39de4f69.js",
+      "_CardMedia-53138e20.js",
       "_interopRequireDefault-01ffd8a5.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Room.jsx"
   },
   "resources/js/Pages/Stream.jsx": {
-    "file": "assets/Stream-bc461578.js",
+    "file": "assets/Stream-768f05ed.js",
     "imports": [
       "resources/js/app.jsx",
       "resources/js/Pages/VideoCall.jsx",
-      "_index-16c32b35.js",
-      "_Button-cdd047b2.js",
-      "_Controls-67d78bd6.js",
-      "_index.modern-d1ba5661.js",
-      "_AgoraRTC_N-production-2aaa42b4.js",
-      "_hoist-non-react-statics.cjs-c4f441ae.js",
+      "_index-9ce575e4.js",
+      "_Button-f5262f02.js",
+      "_Controls-8c8afcdb.js",
+      "_index.modern-71f118cb.js",
+      "_AgoraRTC_N-production-e8172291.js",
+      "_hoist-non-react-statics.cjs-8e4377cf.js",
       "_createClass-5d1a4de6.js",
       "_assertThisInitialized-a147f0d7.js",
       "_interopRequireDefault-01ffd8a5.js",
-      "_TransitionGroup-ac9ce4eb.js",
+      "_TransitionGroup-9d6ff295.js",
       "resources/js/Pages/Video.jsx",
-      "_Typography-c71d19cf.js",
-      "_useTheme-d3f7b7a8.js",
-      "_ButtonBase-a8f2d70e.js",
-      "_Paper-fc7ff9ae.js",
-      "_createSvgIcon-5c9483b2.js"
+      "_Typography-77c9b61f.js",
+      "_useTheme-150e49aa.js",
+      "_ButtonBase-c384509e.js",
+      "_Paper-39de4f69.js",
+      "_createSvgIcon-62300411.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Stream.jsx"
   },
   "resources/js/Pages/Video.jsx": {
-    "file": "assets/Video-e36ecac2.js",
+    "file": "assets/Video-d5ed02d4.js",
     "imports": [
       "resources/js/app.jsx",
-      "_index.modern-d1ba5661.js",
-      "_AgoraRTC_N-production-2aaa42b4.js",
-      "_hoist-non-react-statics.cjs-c4f441ae.js",
+      "_index.modern-71f118cb.js",
+      "_AgoraRTC_N-production-e8172291.js",
+      "_hoist-non-react-statics.cjs-8e4377cf.js",
       "_createClass-5d1a4de6.js",
       "_assertThisInitialized-a147f0d7.js"
     ],
@@ -532,17 +532,17 @@
     "src": "resources/js/Pages/Video.jsx"
   },
   "resources/js/Pages/VideoCall.jsx": {
-    "file": "assets/VideoCall-ffd250d2.js",
+    "file": "assets/VideoCall-6a4aa3e2.js",
     "imports": [
       "resources/js/app.jsx",
-      "_Controls-67d78bd6.js",
+      "_Controls-8c8afcdb.js",
       "resources/js/Pages/Video.jsx",
-      "_AgoraRTC_N-production-2aaa42b4.js",
-      "_index.modern-d1ba5661.js",
+      "_AgoraRTC_N-production-e8172291.js",
+      "_index.modern-71f118cb.js",
       "_interopRequireDefault-01ffd8a5.js",
-      "_hoist-non-react-statics.cjs-c4f441ae.js",
-      "_index-16c32b35.js",
-      "_TransitionGroup-ac9ce4eb.js",
+      "_hoist-non-react-statics.cjs-8e4377cf.js",
+      "_index-9ce575e4.js",
+      "_TransitionGroup-9d6ff295.js",
       "_assertThisInitialized-a147f0d7.js",
       "_createClass-5d1a4de6.js"
     ],
@@ -550,7 +550,7 @@
     "src": "resources/js/Pages/VideoCall.jsx"
   },
   "resources/js/Pages/Welcome.jsx": {
-    "file": "assets/Welcome-28bbddff.js",
+    "file": "assets/Welcome-a34a8411.js",
     "imports": [
       "resources/js/app.jsx"
     ],
@@ -580,42 +580,42 @@
     "css": [
       "assets/main-a7bc66c1.css"
     ],
-    "file": "assets/main-708b6e2c.js",
+    "file": "assets/main-40f38a8f.js",
     "imports": [
       "resources/js/app.jsx",
       "resources/js/Pages/App.jsx",
       "resources/js/Pages/Home.jsx",
-      "_AgoraRTC_N-production-2aaa42b4.js",
-      "_hoist-non-react-statics.cjs-c4f441ae.js",
+      "_AgoraRTC_N-production-e8172291.js",
+      "_hoist-non-react-statics.cjs-8e4377cf.js",
       "_createClass-5d1a4de6.js",
       "_assertThisInitialized-a147f0d7.js",
       "resources/js/Pages/Room.jsx",
-      "_index-16c32b35.js",
-      "_Typography-c71d19cf.js",
+      "_index-9ce575e4.js",
+      "_Typography-77c9b61f.js",
       "_interopRequireDefault-01ffd8a5.js",
-      "_Paper-fc7ff9ae.js",
-      "_CardMedia-98c2ad16.js",
-      "_Navbar-bab0c501.js",
-      "_useTheme-d3f7b7a8.js",
-      "_ButtonBase-a8f2d70e.js",
-      "_TransitionGroup-ac9ce4eb.js",
+      "_Paper-39de4f69.js",
+      "_CardMedia-53138e20.js",
+      "_Navbar-34552ba8.js",
+      "_useTheme-150e49aa.js",
+      "_ButtonBase-c384509e.js",
+      "_TransitionGroup-9d6ff295.js",
       "resources/js/Pages/Footer.jsx",
-      "_createSvgIcon-5c9483b2.js",
+      "_createSvgIcon-62300411.js",
       "resources/js/Pages/Loading.jsx",
-      "_Audio-db659920.js",
+      "_Audio-215ab36b.js",
       "resources/js/Pages/Stream.jsx",
       "resources/js/Pages/VideoCall.jsx",
-      "_Controls-67d78bd6.js",
-      "_index.modern-d1ba5661.js",
+      "_Controls-8c8afcdb.js",
+      "_index.modern-71f118cb.js",
       "resources/js/Pages/Video.jsx",
-      "_Button-cdd047b2.js",
+      "_Button-f5262f02.js",
       "resources/js/Pages/Audio.jsx"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/main.jsx"
   },
   "resources/js/app.css": {
-    "file": "assets/app-61abc0b8.css",
+    "file": "assets/app-9b588ab0.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.jsx": {
@@ -624,7 +624,7 @@
       "assets/bootstrap-icons-bb1de989.woff"
     ],
     "css": [
-      "assets/app-61abc0b8.css"
+      "assets/app-9b588ab0.css"
     ],
     "dynamicImports": [
       "resources/js/Pages/Alert.jsx",
@@ -636,12 +636,12 @@
       "resources/js/Pages/Auth/Register.jsx",
       "resources/js/Pages/Auth/ResetPassword.jsx",
       "resources/js/Pages/Auth/VerifyEmail.jsx",
-      "_Controls-67d78bd6.js",
+      "_Controls-8c8afcdb.js",
       "resources/js/Pages/Dashboard.jsx",
       "resources/js/Pages/Footer.jsx",
       "resources/js/Pages/Home.jsx",
       "resources/js/Pages/Loading.jsx",
-      "_Navbar-bab0c501.js",
+      "_Navbar-34552ba8.js",
       "resources/js/Pages/Profile/Edit.jsx",
       "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx",
       "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx",
@@ -653,7 +653,7 @@
       "resources/js/Pages/Welcome.jsx",
       "resources/js/Pages/main.jsx"
     ],
-    "file": "assets/app-81c59769.js",
+    "file": "assets/app-8bc148e7.js",
     "isEntry": true,
     "src": "resources/js/app.jsx"
   }
