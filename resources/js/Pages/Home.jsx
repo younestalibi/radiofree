@@ -70,7 +70,7 @@ const Home = ({ inCall, setChannelName, setInCall }) => {
                 );
                 setRooms(response.data.rooms);
             } catch (error) {
-                alert(JSON.stringify(error))
+                alert(error.message);
             } finally {
                 setLoading(false);
             }
