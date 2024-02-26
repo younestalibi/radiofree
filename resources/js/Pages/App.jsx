@@ -36,7 +36,7 @@ function App() {
       <Routes>
         {/* Route for / with or without query parameter */}
         <Route path="/"  element={<Home/>} />
-        <Route path="/:room"  element={<Stream/>} />
+        <Route path="/room/:room"  element={<Stream/>} />
 
         {/* Add more routes as needed */}
       </Routes>

@@ -9,7 +9,7 @@ const Room = (props) => {
   const {image,created,name,description,password ,inCall,setChannelName}=props;
   const navigate=useNavigate()
   const handleRoomChange = () => {
-    navigate(`/${name}`, { state: { password } })
+    navigate(`/room/${name}`, { state: { password } })
     // setInCall(!inCall);
   };
   return (

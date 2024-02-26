@@ -11,6 +11,7 @@ function Alert({ open, onClose, onSubmit }) {
   const handleClose = () => {
     setInputValue('');
     onClose();
+    
   };
 
   const handleSubmit = () => {

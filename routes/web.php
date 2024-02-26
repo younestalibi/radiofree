@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-
+use App\Http\Controllers\RoomController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,26 +19,50 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('main');
 });
-Route::get('/welcome', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
+Route::get('/room/{id}', function () {
+    return Inertia::render('main');
 });
-Route::get("/dash",function(){
-    return view("welcome");
-});
+// Route::get('/welcome', function () {
+//     return Inertia::render('Welcome', [
+//         'canLogin' => Route::has('login'),
+//         'canRegister' => Route::has('register'),
+//         'laravelVersion' => Application::VERSION,
+//         'phpVersion' => PHP_VERSION,
+//     ]);
+// });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return Inertia::render('Dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
 
+    Route::get('/dashboard', [RoomController::class, 'index'])->name('dashboard');
+
+    // Show Create Room Form
+    Route::get('/rooms/create', [RoomController::class, 'create'])->name('rooms.create');
+
+    // Store New Room
+    Route::post('/rooms', [RoomController::class, 'store'])->name('rooms.store');
+
+    // Show Room
+    // Route::get('/rooms/{room}', [RoomController::class, 'show']);
+
+    // Show Edit Room Form
+    Route::get('/rooms/{room}/edit', [RoomController::class, 'edit'])->name('rooms.edit');
+
+    // Update Room
+    Route::put('/rooms/{room}', [RoomController::class, 'update'])->name("rooms.update");
+
+    // Delete Room
+    Route::delete('/rooms/{room}', [RoomController::class, 'destroy'])->name('rooms.delete');
+
+    Route::post('/rooms/mail-invitation/{room}', [RoomController::class, 'mailInvitation'])->name('rooms.mail.invetation');
+    Route::get('/rooms/invite/{room}', [RoomController::class, 'invite'])->name('rooms.invite');
+});
 require __DIR__.'/auth.php';

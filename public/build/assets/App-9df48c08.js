@@ -1,0 +1,10 @@
+import{r as e,e as b,a as o,j as F}from"./app-42601e92.js";import U from"./Home-65fcc254.js";import{c as d,R as w,a as v,b as l}from"./index-a311b1ed.js";import y from"./Stream-a306233d.js";import"./AgoraRTC_N-production-ec337157.js";import"./hoist-non-react-statics.cjs-90ab73c8.js";import"./assertThisInitialized-e0ac5d73.js";import"./Room-a403957f.js";import"./Typography-bd5be583.js";import"./interopRequireDefault-01ffd8a5.js";import"./Paper-692635ad.js";import"./CardMedia-0d90dc4e.js";import"./Navbar-f7db632b.js";import"./useTheme-1d8c929e.js";import"./ButtonBase-7bae71ba.js";import"./TransitionGroup-87d13f45.js";import"./Footer-088ab3b2.js";import"./createSvgIcon-64ff2d6a.js";import"./VideoCall-83b089f7.js";import"./Controls-b4d49671.js";import"./index.modern-b5044247.js";import"./Video-5dd8d287.js";import"./Button-9e3a9cf9.js";/**
+ * React Router DOM v6.22.1
+ *
+ * Copyright (c) Remix Software Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
+ */const E="6";try{window.__reactRouterVersion=E}catch{}const _="startTransition",p=b[_];function I(t){let{basename:S,children:R,future:n,window:T}=t,i=e.useRef();i.current==null&&(i.current=d({window:T,v5Compat:!0}));let r=i.current,[a,s]=e.useState({action:r.action,location:r.location}),{v7_startTransition:c}=n||{},m=e.useCallback(u=>{c&&p?p(()=>s(u)):s(u)},[s,c]);return e.useLayoutEffect(()=>r.listen(m),[r,m]),e.createElement(w,{basename:S,children:R,location:a.location,navigationType:a.action,navigator:r,future:n})}var f;(function(t){t.UseScrollRestoration="useScrollRestoration",t.UseSubmit="useSubmit",t.UseSubmitFetcher="useSubmitFetcher",t.UseFetcher="useFetcher",t.useViewTransitionState="useViewTransitionState"})(f||(f={}));var h;(function(t){t.UseFetcher="useFetcher",t.UseFetchers="useFetchers",t.UseScrollRestoration="useScrollRestoration"})(h||(h={}));function H(){return e.useState(!1),o(I,{children:F(v,{children:[o(l,{path:"/",element:o(U,{})}),o(l,{path:"/:room",element:o(y,{})})]})})}export{H as default};
