@@ -57,7 +57,7 @@ class RoomController extends Controller
         $data = [
             "name" => $room->name,
             "password" => $room->password,
-            "link" => env("APP_URL") . "/room/$room->name"
+            "link" => env("APP_URL") . "/room/$room->name/$room->password"
         ];
 
         foreach ($emailArray as $email) {

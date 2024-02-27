@@ -11,7 +11,8 @@ import DialogContent from "@mui/material/DialogContent";
 import TextField from "@mui/material/TextField";
 import axios from "axios";
 const Stream = () => {
-    const { room } = useParams();
+    const { room ,passwordLink} = useParams();
+  
     const [inCall, setInCall] = useState(false);
     const [channelName, setChannelName] = useState(null);
 
@@ -24,7 +25,7 @@ const Stream = () => {
     const [permission, setPermission] = useState(false);
     const navigate = useNavigate();
 
-    const [inputValue, setInputValue] = useState("");
+    const [inputValue, setInputValue] = useState(passwordLink);
 
     const handleClose = () => {
         setOpen(!open);

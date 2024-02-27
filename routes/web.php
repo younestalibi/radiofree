@@ -5,6 +5,8 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\RoomController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,6 +25,9 @@ Route::get('/rooms', function () {
     return Inertia::render('main');
 });
 Route::get('/room/{id}', function () {
+    return Inertia::render('main');
+});
+Route::get('/room/{id}/{password}', function () {
     return Inertia::render('main');
 });
 // Route::get('/welcome', function () {
@@ -68,5 +73,7 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/rooms/mail-invitation/{room}', [RoomController::class, 'mailInvitation'])->name('rooms.mail.invetation');
     Route::get('/rooms/invite/{room}', [RoomController::class, 'invite'])->name('rooms.invite');
+
+
 });
 require __DIR__.'/auth.php';

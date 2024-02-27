@@ -38,7 +38,7 @@ function App() {
         {/* Route for / with or without query parameter */}
         <Route path="/"  element={<Audio/>} />
         <Route path="/rooms"  element={<Home/>} />
-        <Route path="/room/:room"  element={<Stream/>} />
+        <Route path="/room/:room/:passwordLink?"  element={<Stream/>} />
 
         {/* Add more routes as needed */}
       </Routes>
