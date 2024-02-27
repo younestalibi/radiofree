@@ -111,16 +111,7 @@
                                     class="font-medium text-blue-600 dark:text-blue-500  hover:text-blue-700 hover:underline">
                                     <i class="bi bi-skype"></i>
                                 </a>
-                                // <a href="https://twitter.com/intent/tweet?text=Hello%0A%0AYou%20are%20invited%20to%20join%20the%20room%20%22{{ $room->name }}%22.%0ARoom%20Link%3A%20{{ urlencode(env('APP_URL').'/room/'.str_replace(' ', '%20', $room->name).'/'.str_replace(' ','%20',$room->password))}}%0APassword%3A%20{{ $room->password }}%0AThank%20you%21"
-                                //     target="_blank"
-                                //     class="font-medium text-blue-600 dark:text-blue-500  hover:text-blue-700 hover:underline">
-                                //     <i class="bi bi-twitter-x"></i>
-                                // </a>
-                                // <a href="https://www.reddit.com/submit?url=&title=Hello%20You%20are%20invited%20to%20join%20the%20room%20%22{{ $room->name }}%22.%0ARoom%20Link%3A%20{{ urlencode(env('APP_URL').'/room/'.str_replace(' ', '%20', $room->name).'/'.str_replace(' ','%20',$room->password))}}%0APassword%3A%20{{ $room->password }}%0AThank%20you%21"
-                                //     target="_blank"
-                                //     class="font-medium text-blue-600 dark:text-blue-500  hover:text-blue-700 hover:underline">
-                                //     <i class="bi bi-reddit"></i>
-                                // </a>
+                                
 
 
 
