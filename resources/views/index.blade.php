@@ -1052,7 +1052,7 @@
                                       <div class="wpb_wrapper">
                                         <p style="text-align: center"></p>
                                         <div id="audioigniter-231" class="audioigniter-root" data-player-type="full"
-                                          data-tracks-url="http://127.0.0.1:8000/radio" data-display-track-no="true"
+                                          data-tracks-url="http://127.0.0.1:8000/radio/audio" data-display-track-no="true"
                                           data-reverse-track-order="false" data-display-tracklist-covers="true"
                                           data-display-active-cover="true" data-display-artist-names="true"
                                           data-display-buy-buttons="true" data-buy-buttons-target="false"

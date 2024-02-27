@@ -84,8 +84,10 @@ Route::middleware('auth')->group(function () {
 });
 
 
-
-Route::get('/radio', function (\Illuminate\Http\Request $request) {
+// Route::get('/',function(){
+//     return view('index');
+// });
+Route::get('/radio/audio', function (\Illuminate\Http\Request $request) {
     $playlistId = $request->input('audioigniter_playlist_id', null);
 
     // Perform any necessary logic based on $playlistId to fetch data
