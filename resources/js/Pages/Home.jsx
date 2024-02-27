@@ -117,7 +117,7 @@ const Home = ({ inCall, setChannelName, setInCall }) => {
                 </div>
             )}
 
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 };

@@ -18,8 +18,11 @@ use App\Http\Controllers\RoomController;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('main');
+// Route::get('/', function () {
+//     return Inertia::render('main');
+// });
+Route::get('/',function(){
+    return view('index');
 });
 Route::get('/{id}', function () {
     return Inertia::render('main');
@@ -81,32 +84,33 @@ Route::middleware('auth')->group(function () {
 });
 
 
-// Route::get('/radio', function (\Illuminate\Http\Request $request) {
-//     $playlistId = $request->input('audioigniter_playlist_id', null);
 
-//     // Perform any necessary logic based on $playlistId to fetch data
-//     // For simplicity, I'm hardcoding the response here
-//     $response = [
-//         [
-//             "title" => "RadioFreeSom",
-//             "subtitle" => "",
-//             "audio" => "http://stream.zeno.fm/08krves9z4zuv",
-//             "buyUrl" => "",
-//             "downloadUrl" => "",
-//             "downloadFilename" => "",
-//             "cover" => "https://radiofreesom.com/wp-content/uploads/2021/07/vos-logo-512.png"
-//         ]
-//     ];
+Route::get('/radio', function (\Illuminate\Http\Request $request) {
+    $playlistId = $request->input('audioigniter_playlist_id', null);
 
-//     // Check if a callback parameter is provided in the request
-//     $callback = $request->input('callback', null);
+    // Perform any necessary logic based on $playlistId to fetch data
+    // For simplicity, I'm hardcoding the response here
+    $response = [
+        [
+            "title" => "RadioFreeSom",
+            "subtitle" => "",
+            "audio" => "http://stream.zeno.fm/08krves9z4zuv",
+            "buyUrl" => "",
+            "downloadUrl" => "",
+            "downloadFilename" => "",
+            "cover" => asset('images/logo.png')
+        ]
+    ];
 
-//     // If callback is provided, wrap the response in the callback function
-//     if ($callback) {
-//         return response()->json($response)->withCallback($callback);
-//     }
+    // Check if a callback parameter is provided in the request
+    $callback = $request->input('callback', null);
 
-//     // If no callback, simply return the JSON response
-//     return response()->json($response);
-// })->withoutMiddleware('cors');
+    // If callback is provided, wrap the response in the callback function
+    if ($callback) {
+        return response()->json($response)->withCallback($callback);
+    }
+
+    // If no callback, simply return the JSON response
+    return response()->json($response);
+})->withoutMiddleware('cors');
 require __DIR__ . '/auth.php';

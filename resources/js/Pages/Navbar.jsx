@@ -26,7 +26,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <AppBar position="static" >
+      <AppBar style={{ backgroundColor:"black" }} position="static" >
         <Toolbar style={{ display:"flex",justifyContent:'space-between' }}>
           {/* <IconButton
             size="large"
@@ -43,7 +43,7 @@ const Navbar = () => {
             image={logo}
           />
           <CardMedia />
-          <Typography textAlign={"right"}  variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography style={{ color:'#f60f5d' }} textAlign={"right"}  variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Voice of Somalia - Country and Abroad
           </Typography>
         </Toolbar>
