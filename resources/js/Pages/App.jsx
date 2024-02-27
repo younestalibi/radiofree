@@ -39,6 +39,7 @@ function App() {
         <Route path="/"  element={<Audio/>} />
         <Route path="/rooms"  element={<Home/>} />
         <Route path="/room/:room/:passwordLink?"  element={<Stream/>} />
+        <Route path="*" element={<Audio/>} />
 
         {/* Add more routes as needed */}
       </Routes>
