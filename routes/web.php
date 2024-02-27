@@ -24,9 +24,8 @@ use App\Http\Controllers\RoomController;
 Route::get('/',function(){
     return view('index');
 });
-Route::get('/{id}', function () {
-    return Inertia::render('main');
-});
+
+
 Route::get('/rooms', function () {
     return Inertia::render('main');
 });
@@ -115,4 +114,9 @@ Route::get('/radio/audio', function (\Illuminate\Http\Request $request) {
     // If no callback, simply return the JSON response
     return response()->json($response);
 })->withoutMiddleware('cors');
+
 require __DIR__ . '/auth.php';
+
+Route::get('/{any}', function () {
+    return Inertia::render('main');
+});
