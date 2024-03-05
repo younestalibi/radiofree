@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Room;
 use App\Mail\Invetation;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 
 class RoomController extends Controller
 {
@@ -57,7 +58,7 @@ class RoomController extends Controller
         $data = [
             "name" => $room->name,
             "password" => $room->password,
-            "link" => env("APP_URL") . "/room/$room->name/$room->password"
+            "link" => env("APP_URL") . "/room/$room->name/$room->id/$room->password"
         ];
 
         foreach ($emailArray as $email) {
@@ -116,5 +117,29 @@ class RoomController extends Controller
         $room->delete();
 
         return redirect()->back()->with('success', 'Room deleted successfully.');
+    }
+
+
+    public function updateStatus($id, Request $request)
+    {
+        $request->validate([
+            'status' => 'required|string',
+        ]);
+        $room = Room::findOrFail($id);
+        $room->update(['status' => $request->input('status')]);
+
+        if ($request->input('status')) {
+            Room::where('id', '<>', $id)->update(['status' => "inactive"]);
+        }
+        return redirect()->back()->with('success', 'status Updated successfully.');
+    }
+
+    public function updateCounts(Request $request, $roomId)
+    {
+        // return $request->connected;
+        $room = Room::findOrFail($roomId);
+        $room->connected=$request->connected;
+        $room->save();
+        return response()->json(['message' => 'Counts updated successfully.']);
     }
 }

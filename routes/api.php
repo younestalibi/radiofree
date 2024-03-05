@@ -21,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/rooms', [RoomController::class, 'rooms'])->withoutMiddleware("cors");
 Route::post('/verify', [RoomController::class, 'verify'])->withoutMiddleware("cors");
+Route::patch('/rooms/{roomId}', [RoomController::class, 'updateCounts']);

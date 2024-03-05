@@ -21,10 +21,10 @@ export default function Video(props) {
         />
       </Grid>
       {users.length > 0 &&
-        users.map((user) => {
+        users.map((user,i) => {
           if (user.videoTrack) {
             return (
-              <Grid item xs={users.length>1?6:12} sm={gridSpacing}>
+              <Grid key={i} item xs={users.length>1?6:12} sm={gridSpacing}>
                 {/* <Card> */}
                 <AgoraVideoPlayer
                   videoTrack={user.videoTrack}

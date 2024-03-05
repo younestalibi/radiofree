@@ -6,10 +6,10 @@ import Typography from '@mui/material/Typography';
 import DefaultImage from './assets/default.png'
 import { useNavigate } from 'react-router-dom';
 const Room = (props) => {
-  const {image,created,name,description,password ,inCall,setChannelName}=props;
+  const {image,created,roomId,name,description,password ,inCall,setChannelName}=props;
   const navigate=useNavigate()
   const handleRoomChange = () => {
-    navigate(`/room/${name}`, { state: { password } })
+    navigate(`/room/${name}/${roomId}`, { state: { password } })
     // setInCall(!inCall);
   };
   return (

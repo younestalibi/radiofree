@@ -5,7 +5,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\RoomController;
-
+use App\Models\Room;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,17 +22,18 @@ use App\Http\Controllers\RoomController;
 //     return Inertia::render('main');
 // });
 Route::get('/',function(){
-    return view('index');
+    $activeRoom = Room::where('status', 'active')->first();
+    return view('index',compact('activeRoom'));
 });
 
 
 Route::get('/rooms', function () {
     return Inertia::render('main');
 });
-Route::get('/room/{id}', function () {
+Route::get('/room/{room}/{id}', function () {
     return Inertia::render('main');
 });
-Route::get('/room/{id}/{password}', function () {
+Route::get('/room/{room}/{id}/{password}', function () {
     return Inertia::render('main');
 });
 // Route::get('/welcome', function () {
@@ -79,6 +80,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/rooms/mail-invitation/{room}', [RoomController::class, 'mailInvitation'])->name('rooms.mail.invetation');
     Route::get('/rooms/invite/{room}', [RoomController::class, 'invite'])->name('rooms.invite');
 
+    Route::put('/rooms/{id}/update-status', [RoomController::class, 'updateStatus'])->name('rooms.update-status');
+
+
 
 });
 
@@ -88,20 +92,28 @@ Route::middleware('auth')->group(function () {
 // });
 Route::get('/radio/audio', function (\Illuminate\Http\Request $request) {
     $playlistId = $request->input('audioigniter_playlist_id', null);
+    $activeRoom = Room::where('status', 'active')->first();
 
     // Perform any necessary logic based on $playlistId to fetch data
     // For simplicity, I'm hardcoding the response here
+
     $response = [
         [
             "title" => "RadioFreeSom",
             "subtitle" => "",
-            "audio" => "http://stream.zeno.fm/08krves9z4zuv",
             "buyUrl" => "",
             "downloadUrl" => "",
             "downloadFilename" => "",
             "cover" => asset('images/logo.png')
         ]
     ];
+    if ($activeRoom) {
+        // If $activeRoom is found, use asset for the audio URL
+        $response[0]["audio"] = asset('silence.mp3');
+    } else {
+        // If $activeRoom is not found, use the HTTP link for the audio URL
+        $response[0]["audio"] = "http://stream.zeno.fm/08krves9z4zuv";
+    }
 
     // Check if a callback parameter is provided in the request
     $callback = $request->input('callback', null);

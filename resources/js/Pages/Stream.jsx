@@ -11,20 +11,15 @@ import DialogContent from "@mui/material/DialogContent";
 import TextField from "@mui/material/TextField";
 import axios from "axios";
 const Stream = () => {
-    const { room ,passwordLink} = useParams();
-  
+    const { room, passwordLink,id } = useParams();
     const [inCall, setInCall] = useState(false);
     const [channelName, setChannelName] = useState(null);
-
     const location = useLocation();
-    // const { password } = location.state;
-    // console.log(password);
     const [openPopup, setOpenPopup] = useState(true);
     const [enteredValue, setEnteredValue] = useState("");
     const [open, setOpen] = useState(true);
     const [permission, setPermission] = useState(false);
     const navigate = useNavigate();
-
     const [inputValue, setInputValue] = useState(passwordLink);
 
     const handleClose = () => {
@@ -54,25 +49,28 @@ const Stream = () => {
             };
 
             axios
-              .post(`${import.meta.env.VITE_BACKEND_URL}/api/verify`, postData)
-              .then((response) => {
-                if (response.data.answer) {
-                  setPermission(true);
-                  handleClose(!open);
-                } else {
-                  alert("The password is not correct! try again.");
-                }
-              })
-              .catch((error) => {
-                alert("Error:", error.message);
-              });
+                .post(
+                    `${import.meta.env.VITE_BACKEND_URL}/api/verify`,
+                    postData
+                )
+                .then((response) => {
+                    if (response.data.answer) {
+                        setPermission(true);
+                        handleClose(!open);
+                    } else {
+                        alert("The password is not correct! try again.");
+                    }
+                })
+                .catch((error) => {
+                    alert("Error:", error.message);
+                });
         }
     };
 
     return (
         <>
             {permission ? (
-                <VideoCall channelName={room} setInCall={setInCall} />
+                <VideoCall roomId={id} channelName={room} setInCall={setInCall} />
             ) : (
                 <div>
                     <Dialog open={open} onClose={handleClose}>

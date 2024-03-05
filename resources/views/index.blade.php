@@ -970,6 +970,7 @@
 <body
   class="home page-template page-template-full_width page-template-full_width-php page page-id-228 bridge-core-1.0.6 qode-title-hidden qode_grid_1300 footer_responsive_adv qode-theme-ver-18.2 qode-theme-cs disabled_footer_top disabled_footer_bottom qode_header_in_grid wpb-js-composer js-comp-ver-6.4.1 vc_responsive"
   itemscope itemtype="http://schema.org/WebPage">
+  <input type="hidden" id="roomInput" value="{{$activeRoom ? $activeRoom->name : "null"}}">
   <div class="wrapper">
     <div class="wrapper_inner">
       <!-- Google Analytics start -->
@@ -1051,16 +1052,27 @@
                                     <div class="wpb_text_column wpb_content_element">
                                       <div class="wpb_wrapper">
                                         <p style="text-align: center"></p>
-                                        <div id="audioigniter-231" class="audioigniter-root" data-player-type="full"
-                                          data-tracks-url="{{env('APP_URL')}}/radio/audio" data-display-track-no="true"
-                                          data-reverse-track-order="false" data-display-tracklist-covers="true"
-                                          data-display-active-cover="true" data-display-artist-names="true"
-                                          data-display-buy-buttons="true" data-buy-buttons-target="false"
-                                          data-cycle-tracks="false" data-display-credits="false"
-                                          data-display-tracklist="false" data-allow-tracklist-toggle="false"
-                                          data-allow-tracklist-loop="false" data-limit-tracklist-height="true"
-                                          data-volume="100" data-tracklist-height="185"></div>
+                                        <div id="audioigniter-231" class="audioigniter-root" 
+                                        data-player-type="full"
+                                        data-tracks-url="{{env('APP_URL')}}/radio/audio" 
+                                        data-display-track-no="true"
+                                        data-reverse-track-order="false" 
+                                        data-display-tracklist-covers="true"
+                                        data-display-active-cover="true" 
+                                        data-display-artist-names="true"
+                                        data-display-buy-buttons="true" 
+                                        data-buy-buttons-target="false"
+                                        data-cycle-tracks="true" 
+                                        data-display-credits="false"
+                                        data-display-tracklist="false" 
+                                        data-allow-tracklist-toggle="false"
+                                        data-allow-tracklist-loop="false" 
+                                        data-limit-tracklist-height="true"
+                                        data-volume="100" 
+                                        data-tracklist-height="185"></div>
+                                        
                                       </div>
+                              
                                     </div>
                                   </div>
                                 </div>
@@ -1690,6 +1702,25 @@
   </style>
   <a href="/rooms" class="room-button "><i class="bi bi-caret-down-square-fill"></i></a>
 
+
+
+
+  <script src='{{asset("agora/vendor/jquery-3.4.1.min.js")}}'></script>
+  <script src='{{asset("agora/vendor/bootstrap.bundle.min.js")}}'></script>
+  <script src='{{asset("agora/AgoraRTC_N-4.20.1.js")}}'></script>
+  <script src='{{asset("agora/index.js")}}'></script>
+  <script>
+  //    function checkAriaPressed() {
+  //   var ariaPressedValue = this.getAttribute('aria-pressed');
+  //   alert('aria-pressed value is ' + ariaPressedValue);
+  // }
+
+  // // Get the element by class name
+  // var audioControl = document.querySelector('.ai-audio-control');
+
+  // // Attach the click event listener
+  // audioControl.addEventListener('click', checkAriaPressed);
+  </script>
 </body>
 
 </html>

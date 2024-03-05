@@ -49,6 +49,13 @@
                                 Password
                             </th>
                             <th scope="col" class="px-6 py-3">
+                                Status
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                            Connected
+                            </th>
+                         
+                            <th scope="col" class="px-6 py-3">
                                 Created at
                             </th>
                             <th scope="col" class="px-6 py-3">
@@ -77,16 +84,31 @@
                                 {{ $room->password }}
                             </td>
                             <td class="px-6 py-4">
+                            <form class="statusForm" action="{{ route('rooms.update-status', ['id' => $room->id]) }}" method="POST">
+                                @csrf
+                                @method('PUT')
+                                <select name="status" class="status">
+                                    <option value="active" {{ $room->status == "active" ? 'selected' : '' }}>Active</option>
+                                    <option value="inactive" {{ $room->status == "inactive" ? 'selected' : '' }}>InActive</option>
+                                </select>
+                            </form>
+
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $room->connected }}
+                            </td>
+                          
+                            <td class="px-6 py-4">
                                 {{ $room->created_at }}
                             </td>
                             <td class="px-6 py-4">
-                                <a href="{{route('rooms.edit',['room'=>$room->id])}}"
+                                <a href="{{route('rooms.edit', ['room' => $room->id])}}"
                                     class="font-medium text-green-600 dark:text-green-500  hover:text-green-700 hover:underline">
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
 
                                 <form class='inline' method="post"
-                                    action="{{route('rooms.delete',['room'=>$room->id])}}">
+                                    action="{{route('rooms.delete', ['room' => $room->id])}}">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit"
@@ -94,42 +116,39 @@
                                         <i class="bi bi-trash3-fill"></i>
                                     </button>
                                 </form>
-                                <a href="{{route('rooms.invite',['room'=>$room->id])}}"
+                                <a href="{{route('rooms.invite', ['room' => $room->id])}}"
                                     class="font-medium text-blue-600 dark:text-blue-500  hover:text-blue-700 hover:underline">
                                     <i class="bi bi-envelope-at-fill"></i>
                                 </a>
 
 
 
-                                <a href="https://wa.me/?text=Hello%0A%0AYou%20are%20invited%20to%20join%20the%20room%20%22{{ $room->name }}%22.%0ARoom%20Link%3A%20{{ urlencode(env('APP_URL').'/room/'.str_replace(' ', '%20', $room->name).'/'.str_replace(' ','%20',$room->password))}}%0APassword%3A%20{{ $room->password }}%0AThank%20you%21"
+                                <a href="https://wa.me/?text=Hello%0A%0AYou%20are%20invited%20to%20join%20the%20room%20%22{{ $room->name }}%22.%0ARoom%20Link%3A%20{{ urlencode(env('APP_URL') . '/room/'. str_replace(' ', '%20', $room->name) . '/'.$room->id.'/' . str_replace(' ', '%20', $room->password))}}%0APassword%3A%20{{ $room->password }}%0AThank%20you%21"
                                     target="_blank"
                                     class="font-medium text-blue-600 dark:text-blue-500  hover:text-blue-700 hover:underline">
                                     <i class="bi bi-whatsapp"></i>
                                 </a>
-                                <a href="https://web.skype.com/share?url={{ urlencode(env('APP_URL').'/room/'.str_replace(' ', '%20', $room->name).'/'.str_replace(' ','%20',$room->password))}}"
+                                <a href="https://web.skype.com/share?url={{ urlencode(env('APP_URL') . '/room/' . str_replace(' ', '%20', $room->name) . '/'.$room->id.'/'. str_replace(' ', '%20', $room->password))}}"
                                     target="_blank"
                                     class="font-medium text-blue-600 dark:text-blue-500  hover:text-blue-700 hover:underline">
                                     <i class="bi bi-skype"></i>
                                 </a>
-                                
-
-
-
-
-
-
-
-
-
                             </td>
                         </tr>
                         @endforeach
                     </tbody>
                 </table>
             </div>
-
         </div>
-
-
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script>
+    $(document).ready(function () {
+        // Attach change event listener to the select dropdown using jQuery
+        $('.status').change(function () {
+            // Find the parent form and submit it
+            $(this).closest('form').submit();
+        });
+    });
+</script>
     </div>
 </x-app-layout>

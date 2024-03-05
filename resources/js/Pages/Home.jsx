@@ -90,6 +90,7 @@ const Home = ({ inCall, setChannelName, setInCall }) => {
                             <Room
                                 inCall={inCall}
                                 setInCall={setInCall}
+                                roomId={room.id}
                                 image={`${
                                     import.meta.env.VITE_BACKEND_URL
                                 }/storage/${room.image}`}
