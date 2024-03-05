@@ -112,7 +112,8 @@ Route::get('/radio/audio', function (\Illuminate\Http\Request $request) {
         $response[0]["audio"] = asset('silence.mp3');
     } else {
         // If $activeRoom is not found, use the HTTP link for the audio URL
-        $response[0]["audio"] = "http://stream.zeno.fm/08krves9z4zuv";
+        $response[0]["audio"] = "https://stream.zeno.fm/cub84trbgy5tv";
+        // $response[0]["audio"] = "http://stream.zeno.fm/08krves9z4zuv";
     }
 
     // Check if a callback parameter is provided in the request
