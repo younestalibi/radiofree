@@ -109,7 +109,7 @@ async function join() {
                 connected: client.remoteUsers.length,
             })
             .then((response) => {
-                console.log(response);
+                console.log(response.data.message);
             })
             .catch((error) => {
                 console.log(error);
@@ -121,7 +121,7 @@ async function join() {
                 connected: client.remoteUsers.length,
             })
             .then((response) => {
-                console.log(response);
+                console.log(response.data.message);
             })
             .catch((error) => {
                 console.log(error);
