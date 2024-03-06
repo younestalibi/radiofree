@@ -104,8 +104,7 @@ async function join() {
     client.on("user-published", handleUserPublished);
     client.on("user-unpublished", handleUserUnpublished);
     client.on("user-joined", async (users) => {
-        console.log(client.remoteUsers.length);
-        console.log(typeof client.remoteUsers.length);
+ 
         await axios
             .patch(`${app_url}/api/rooms/${roomId}`, {
                 connected: client.remoteUsers.length,
@@ -116,15 +115,9 @@ async function join() {
             .catch((error) => {
                 console.log(error);
             });
-        console.log(users);
-        console.log("===join=======");
-        console.log(client.remoteUsers);
-        console.log("=====join=====");
+      
     });
     client.on("user-left", async (users) => {
-        console.log(client.remoteUsers.length);
-        console.log(typeof client.remoteUsers.length);
-        console.log(`${app_url}/api/rooms/${roomId}`)
         await axios
             .patch(`${app_url}/api/rooms/${roomId}`, {
                 connected: client.remoteUsers.length,
@@ -137,10 +130,7 @@ async function join() {
                 alert(JSON.stringify(error))
                 console.log(error);
             });
-        console.log(users);
-        console.log("=====left=====");
-        console.log(client.remoteUsers);
-        console.log("======left====");
+        
     });
     // join a channel and create local tracks, we can use Promise.all to run them concurrently
     [options.uid, localTracks.audioTrack] = await Promise.all([
@@ -209,8 +199,6 @@ function handleUserPublished(user, mediaType) {
     const id = user.uid;
     remoteUsers[id] = user;
     subscribe(user, mediaType);
-    console.log(`${app_url}/api/rooms/${roomId}`)
-
 }
 
 function handleUserUnpublished(user) {
