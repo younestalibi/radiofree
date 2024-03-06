@@ -7,6 +7,8 @@ var localTracks = {
 var remoteUsers = {};
 // Agora client options
 var roomName = document.getElementById("roomInput").value;
+var roomId = document.getElementById("roomId").value;
+var app_url = document.getElementById("app_url").value;
 
 var options = {
     appid: "64789cb143914522938e4d4a0a781dc3",
@@ -43,6 +45,7 @@ function checkAriaPressed() {
             leave();
             console.log("it stopped");
         } else {
+            console.log(roomName)
             async function m() {
                 try {
                     options.channel = roomName;
@@ -100,7 +103,42 @@ async function join() {
     // add event listener to play remote tracks when remote user publishs.
     client.on("user-published", handleUserPublished);
     client.on("user-unpublished", handleUserUnpublished);
-
+    client.on("user-joined", async (users) => {
+        console.log(client.remoteUsers.length);
+        console.log(typeof client.remoteUsers.length);
+        await axios
+            .patch(`${app_url}/api/rooms/${roomId}`, {
+                connected: client.remoteUsers.length,
+            })
+            .then((response) => {
+                console.log(response);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        console.log(users);
+        console.log("===join=======");
+        console.log(client.remoteUsers);
+        console.log("=====join=====");
+    });
+    client.on("user-left", async (users) => {
+        console.log(client.remoteUsers.length);
+        console.log(typeof client.remoteUsers.length);
+        await axios
+            .patch(`${app_url}/api/rooms/${roomId}`, {
+                connected: client.remoteUsers.length,
+            })
+            .then((response) => {
+                console.log(response);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        console.log(users);
+        console.log("=====left=====");
+        console.log(client.remoteUsers);
+        console.log("======left====");
+    });
     // join a channel and create local tracks, we can use Promise.all to run them concurrently
     [options.uid, localTracks.audioTrack] = await Promise.all([
         // join the channel

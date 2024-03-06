@@ -971,6 +971,8 @@
   class="home page-template page-template-full_width page-template-full_width-php page page-id-228 bridge-core-1.0.6 qode-title-hidden qode_grid_1300 footer_responsive_adv qode-theme-ver-18.2 qode-theme-cs disabled_footer_top disabled_footer_bottom qode_header_in_grid wpb-js-composer js-comp-ver-6.4.1 vc_responsive"
   itemscope itemtype="http://schema.org/WebPage">
   <input type="hidden" id="roomInput" value="{{$activeRoom ? $activeRoom->name : "null"}}">
+  <input type="hidden" id="roomId" value="{{$activeRoom ? $activeRoom->id : "null"}}">
+  <input type="hidden" id="app_url" value="{{env('APP_URL')}}">
   <div class="wrapper">
     <div class="wrapper_inner">
       <!-- Google Analytics start -->
@@ -1705,6 +1707,7 @@
 
 
 
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <!--  <script src='{{asset("agora/vendor/jquery-3.4.1.min.js")}}'></script> -->
   <script src='{{asset("agora/vendor/bootstrap.bundle.min.js")}}'></script>
   <script src='{{asset("agora/AgoraRTC_N-4.20.1.js")}}'></script>
