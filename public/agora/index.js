@@ -98,7 +98,6 @@ const jo = async () => {
 // document.getElementById("leave").addEventListener("click", function (e) {
 //     leave();
 // });
-console.log(`${app_url}/api/rooms/${roomId}`)
 
 async function join() {
     // add event listener to play remote tracks when remote user publishs.
@@ -210,6 +209,8 @@ function handleUserPublished(user, mediaType) {
     const id = user.uid;
     remoteUsers[id] = user;
     subscribe(user, mediaType);
+    console.log(`${app_url}/api/rooms/${roomId}`)
+
 }
 
 function handleUserUnpublished(user) {
