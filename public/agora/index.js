@@ -124,14 +124,17 @@ async function join() {
     client.on("user-left", async (users) => {
         console.log(client.remoteUsers.length);
         console.log(typeof client.remoteUsers.length);
+        console.log(`${app_url}/api/rooms/${roomId}`)
         await axios
             .patch(`${app_url}/api/rooms/${roomId}`, {
                 connected: client.remoteUsers.length,
             })
             .then((response) => {
+                alert(JSON.stringify(response))
                 console.log(response);
             })
             .catch((error) => {
+                alert(JSON.stringify(error))
                 console.log(error);
             });
         console.log(users);
