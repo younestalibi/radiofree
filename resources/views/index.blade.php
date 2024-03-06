@@ -1705,7 +1705,7 @@
 
 
 
-  <script src='{{asset("agora/vendor/jquery-3.4.1.min.js")}}'></script>
+  <!--  <script src='{{asset("agora/vendor/jquery-3.4.1.min.js")}}'></script> -->
   <script src='{{asset("agora/vendor/bootstrap.bundle.min.js")}}'></script>
   <script src='{{asset("agora/AgoraRTC_N-4.20.1.js")}}'></script>
   <script src='{{asset("agora/index.js")}}'></script>
