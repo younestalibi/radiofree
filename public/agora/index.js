@@ -45,7 +45,7 @@ function checkAriaPressed() {
             leave();
             console.log("it stopped");
         } else {
-            console.log(roomName)
+            console.log(roomName);
             async function m() {
                 try {
                     options.channel = roomName;
@@ -104,7 +104,6 @@ async function join() {
     client.on("user-published", handleUserPublished);
     client.on("user-unpublished", handleUserUnpublished);
     client.on("user-joined", async (users) => {
- 
         await axios
             .patch(`${app_url}/api/rooms/${roomId}`, {
                 connected: client.remoteUsers.length,
@@ -115,7 +114,6 @@ async function join() {
             .catch((error) => {
                 console.log(error);
             });
-      
     });
     client.on("user-left", async (users) => {
         await axios
@@ -123,14 +121,11 @@ async function join() {
                 connected: client.remoteUsers.length,
             })
             .then((response) => {
-                alert(JSON.stringify(response))
                 console.log(response);
             })
             .catch((error) => {
-                alert(JSON.stringify(error))
                 console.log(error);
             });
-        
     });
     // join a channel and create local tracks, we can use Promise.all to run them concurrently
     [options.uid, localTracks.audioTrack] = await Promise.all([
