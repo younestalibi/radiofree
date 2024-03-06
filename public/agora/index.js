@@ -98,6 +98,7 @@ const jo = async () => {
 // document.getElementById("leave").addEventListener("click", function (e) {
 //     leave();
 // });
+console.log(`${app_url}/api/rooms/${roomId}`)
 
 async function join() {
     // add event listener to play remote tracks when remote user publishs.
