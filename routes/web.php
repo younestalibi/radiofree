@@ -25,6 +25,10 @@ Route::get('/',function(){
     $activeRoom = Room::where('status', 'active')->first();
     return view('index',compact('activeRoom'));
 });
+Route::get('/media',function(){
+    $activeRoom = Room::where('status', 'active')->first();
+    return view('media',compact('activeRoom'));
+});
 
 
 Route::get('/rooms', function () {
