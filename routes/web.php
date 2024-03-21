@@ -21,13 +21,13 @@ use App\Models\Room;
 // Route::get('/', function () {
 //     return Inertia::render('main');
 // });
-Route::get('/',function(){
+Route::get('/', function () {
     $activeRoom = Room::where('status', 'active')->first();
-    return view('index',compact('activeRoom'));
+    return view('index', compact('activeRoom'));
 });
-Route::get('/media',function(){
+Route::get('/media', function () {
     $activeRoom = Room::where('status', 'active')->first();
-    return view('media',compact('activeRoom'));
+    return view('media', compact('activeRoom'));
 });
 
 
@@ -85,9 +85,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/rooms/invite/{room}', [RoomController::class, 'invite'])->name('rooms.invite');
 
     Route::put('/rooms/{id}/update-status', [RoomController::class, 'updateStatus'])->name('rooms.update-status');
-
-
-
 });
 
 
