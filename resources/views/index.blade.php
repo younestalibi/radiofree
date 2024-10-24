@@ -43,7 +43,7 @@
                     <!-- Column 2: Controls -->
                     <div class="col-span-3 md:col-span-2 flex-col justify-center px-4">
                         <div class="flex items-center justify-between">
-                            <h2 class="text-2xl font-bold">Podcast Title</h2>
+                            <h2 class="text-2xl font-bold">DC-metro radio</h2>
                             <button id="play-button" class="bg-blue-500 w-12 h-12 text-white rounded-full p-2">▶️</button>
                         </div>
                         <audio id="audio" src="https://stream.zeno.fm/cub84trbgy5tv" preload="metadata"></audio>
