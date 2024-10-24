@@ -61,49 +61,10 @@
                     </div>
                 </div>
 
-                <script>
-                    const audio = document.getElementById('audio');
-                    const playButton = document.getElementById('play-button');
-                    const volumeControl = document.getElementById('volume-control');
-                    const volumeLabel = document.getElementById('volume-label');
-                    const progressBar = document.getElementById('progress-bar');
-                    const currentTimeLabel = document.getElementById('current-time');
 
-                    // Play/Pause functionality
-                    playButton.addEventListener('click', () => {
-                        if (audio.paused) {
-                            audio.play();
-                            playButton.textContent = '❚❚'; // Change to pause icon
-                        } else {
-                            audio.pause();
-                            playButton.textContent = '▶️'; // Change to play icon
-                        }
-                    });
-
-                    // Update current time and progress bar
-                    audio.addEventListener('timeupdate', () => {
-                        currentTimeLabel.textContent = formatTime(audio.currentTime);
-                        if (audio.duration) {
-                            progressBar.value = (audio.currentTime / audio.duration) * 100; // Update progress based on current time and duration
-                        }
-                    });
-
-                    // Format time in mm:ss
-                    function formatTime(seconds) {
-                        const minutes = Math.floor(seconds / 60);
-                        const secs = Math.floor(seconds % 60);
-                        return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
-                    }
-
-                    // Volume control functionality
-                    volumeControl.addEventListener('input', () => {
-                        audio.volume = volumeControl.value / 100; // Set volume as a fraction
-                        volumeLabel.textContent = `${volumeControl.value}%`;
-                    });
-                </script>
             </div>
             <!-- Column 2 -->
-            <div class="bg-white p-2 rounded shadow">
+            <div class="bg-white p-2 rounded shadow md:w-[70%] ml-auto">
                 <h2 class="text-xl font-bold mb-2">Podcasts</h2>
                 @if ($podcasts->count()>0)
                 <div style="max-height: 300px; overflow-x:auto;">
@@ -115,18 +76,14 @@
                                 <b>{{$podcast->title}}</b>
                                 <a class="underline text-indigo-500" target="_blank" href="{{$podcast->link}}">Watch</a>
                             </div>
-                            <small>
-                                Share on :
-                                <a href="https://wa.me/?text=Check%20out%20this%20podcast%20%22{{ urlencode($podcast->title) }}%22.%20Listen%20here%3A%20{{ urlencode($podcast->link) }}"
-                                    target="_blank"
-                                    class="font-medium text-blue-600 dark:text-blue-500 hover:text-blue-700 hover:underline">
-                                    <i class="bi bi-whatsapp"></i>
-                                </a>
-                                <a href="https://web.skype.com/share?url={{ urlencode($podcast->link) }}"
-                                    target="_blank"
-                                    class="font-medium text-blue-600 dark:text-blue-500 hover:text-blue-700 hover:underline">
-                                    <i class="bi bi-skype"></i>
-                                </a></small>
+                            <ul class="flex gap-3 text-xl text-blue-500">
+                                <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode($podcast->link) }}" class="hover:text-blue-700"><i class="bi bi-facebook"></i></a></li>
+                                <li><a target="_blank" href="https://twitter.com/intent/tweet?text=my share text&amp;url={{ urlencode($podcast->link) }}" class="hover:text-blue-700"><i class="bi bi-twitter"></i></a></li>
+                                <li><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ urlencode($podcast->link) }}&amp;title=my share text&amp;summary=dit is de linkedin summary" class="hover:text-blue-700"><i class="bi bi-linkedin"></i></a></li>
+                                <li><a target="_blank" href="https://wa.me/?text={{ urlencode($podcast->link) }}" class="hover:text-blue-700"><i class="bi bi-whatsapp"></i></a></li>
+                            </ul>
+
+
                         </div>
                     </div>
                     @endforeach
@@ -146,7 +103,7 @@
             white-space: nowrap;
             overflow: hidden;
             display: block;
-            animation: scroll-left 20s linear infinite;
+            animation: scroll-left 25s linear infinite;
         }
 
         @keyframes scroll-left {
@@ -159,6 +116,46 @@
             }
         }
     </style>
+    <script>
+        const audio = document.getElementById('audio');
+        const playButton = document.getElementById('play-button');
+        const volumeControl = document.getElementById('volume-control');
+        const volumeLabel = document.getElementById('volume-label');
+        const progressBar = document.getElementById('progress-bar');
+        const currentTimeLabel = document.getElementById('current-time');
+
+        // Play/Pause functionality
+        playButton.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                playButton.textContent = '❚❚'; // Change to pause icon
+            } else {
+                audio.pause();
+                playButton.textContent = '▶️'; // Change to play icon
+            }
+        });
+
+        // Update current time and progress bar
+        audio.addEventListener('timeupdate', () => {
+            currentTimeLabel.textContent = formatTime(audio.currentTime);
+            if (audio.duration) {
+                progressBar.value = (audio.currentTime / audio.duration) * 100; // Update progress based on current time and duration
+            }
+        });
+
+        // Format time in mm:ss
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+
+        // Volume control functionality
+        volumeControl.addEventListener('input', () => {
+            audio.volume = volumeControl.value / 100; // Set volume as a fraction
+            volumeLabel.textContent = `${volumeControl.value}%`;
+        });
+    </script>
 
 
 
