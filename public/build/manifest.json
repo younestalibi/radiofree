@@ -205,7 +205,7 @@
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "resources/css/app.css": {
-    "file": "assets/app-61c1ce3b.css",
+    "file": "assets/app-c2717c01.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
