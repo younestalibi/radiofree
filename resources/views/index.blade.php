@@ -16,7 +16,7 @@
     <input type="hidden" id="roomInput" value="{{$activeRoom ? $activeRoom->name : "null"}}">
     <input type="hidden" id="roomId" value="{{$activeRoom ? $activeRoom->id : "null"}}">
     <input type="hidden" id="app_url" value="{{env('APP_URL')}}">
-    
+
     <nav class="bg-black p-4">
         <div class="container mx-auto flex justify-between items-center">
             <img src="{{asset('images/logo.png')}}" alt="Logo" width="120" class="rounded-full object-contain">
@@ -105,9 +105,9 @@
             <!-- Column 2 -->
             <div class="bg-white p-2 rounded shadow">
                 <h2 class="text-xl font-bold mb-2">Podcasts</h2>
+                @if ($podcasts->count()>0)
+                @foreach ( $podcasts as $podcast )
                 <div style="max-height: 300px; overflow-x:auto;">
-                    @if ($podcasts->count()>0)
-                    @foreach ( $podcasts as $podcast )
                     <div class="flex mb-4 justify-start gap-3 ">
                         <img style="aspect-ratio: 16/9;" class=" object-cover w-1/2" src="{{ asset('storage/' . $podcast->thumbnail) }}" alt="{{ $podcast->title }} Thumbnail ">
                         <div class="flex flex-col justify-start  w-full ">
@@ -129,50 +129,6 @@
                                 </a></small>
                         </div>
                     </div>
-                    <div class="flex mb-4 justify-start gap-3 ">
-                        <img style="aspect-ratio: 16/9;" class=" object-cover w-1/2" src="{{ asset('storage/' . $podcast->thumbnail) }}" alt="{{ $podcast->title }} Thumbnail ">
-                        <div class="flex flex-col justify-start  w-full ">
-                            <div class="flex justify-between w-full ">
-                                <b>{{$podcast->title}}</b>
-                                <a class="underline text-indigo-500" target="_blank" href="{{$podcast->link}}">Watch</a>
-                            </div>
-                            <small>
-                                Share on :
-                                <a href="https://wa.me/?text=Check%20out%20this%20podcast%20%22{{ urlencode($podcast->title) }}%22.%20Listen%20here%3A%20{{ urlencode($podcast->link) }}"
-                                    target="_blank"
-                                    class="font-medium text-blue-600 dark:text-blue-500 hover:text-blue-700 hover:underline">
-                                    <i class="bi bi-whatsapp"></i>
-                                </a>
-                                <a href="https://web.skype.com/share?url={{ urlencode($podcast->link) }}"
-                                    target="_blank"
-                                    class="font-medium text-blue-600 dark:text-blue-500 hover:text-blue-700 hover:underline">
-                                    <i class="bi bi-skype"></i>
-                                </a></small>
-                        </div>
-                    </div>
-                    <div class="flex mb-4 justify-start gap-3 ">
-                        <img style="aspect-ratio: 16/9;" class=" object-cover w-1/2" src="{{ asset('storage/' . $podcast->thumbnail) }}" alt="{{ $podcast->title }} Thumbnail ">
-                        <div class="flex flex-col justify-start  w-full ">
-                            <div class="flex justify-between w-full ">
-                                <b>{{$podcast->title}}</b>
-                                <a class="underline text-indigo-500" target="_blank" href="{{$podcast->link}}">Watch</a>
-                            </div>
-                            <small>
-                                Share on :
-                                <a href="https://wa.me/?text=Check%20out%20this%20podcast%20%22{{ urlencode($podcast->title) }}%22.%20Listen%20here%3A%20{{ urlencode($podcast->link) }}"
-                                    target="_blank"
-                                    class="font-medium text-blue-600 dark:text-blue-500 hover:text-blue-700 hover:underline">
-                                    <i class="bi bi-whatsapp"></i>
-                                </a>
-                                <a href="https://web.skype.com/share?url={{ urlencode($podcast->link) }}"
-                                    target="_blank"
-                                    class="font-medium text-blue-600 dark:text-blue-500 hover:text-blue-700 hover:underline">
-                                    <i class="bi bi-skype"></i>
-                                </a></small>
-                        </div>
-                    </div>
-
-
                 </div>
                 @endforeach
             </div>
