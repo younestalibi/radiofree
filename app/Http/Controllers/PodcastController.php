@@ -23,17 +23,18 @@ class PodcastController extends Controller
     // Store a newly created podcast in the database
     public function store(Request $request)
     {
-        $request->validate([
+        $data = $request->validate([
             'title' => 'required|string|max:255',
-            'thumbnail' => 'required|image',
+            'thumbnail' => 'required|image|mimes:png,jpg,jpeg,svg|max:2048',
+
             'link' => 'required|url',
         ]);
 
-        Podcast::create([
-            'title' => $request->title,
-            'thumbnail' => $request->thumbnail,
-            'link' => $request->link,
-        ]);
+        if ($request->hasFile('thumbnail')) {
+            $thumbnailPath = $request->file('thumbnail')->store('uploads', 'public');
+            $data['thumbnail'] = $thumbnailPath;
+        }
+        Podcast::create($data);
 
         return redirect()->route('podcasts.index')->with('success', 'Podcast created successfully.');
     }
@@ -46,20 +47,22 @@ class PodcastController extends Controller
     }
 
     // Update the specified podcast in the database
-    public function update(Request $request, $id)
+    public function update(Request $request, Podcast $podcast)
     {
-        $request->validate([
+        $data = $request->validate([
             'title' => 'required|string|max:255',
-            'thumbnail' => 'required|string',
+            'thumbnail' => 'nullable|image|mimes:png,jpg,jpeg,svg|max:2048',
             'link' => 'required|url',
         ]);
 
-        $podcast = Podcast::findOrFail($id);
-        $podcast->update([
-            'title' => $request->title,
-            'thumbnail' => $request->thumbnail,
-            'link' => $request->link,
-        ]);
+        if ($request->hasFile('thumbnail')) {
+            if ($podcast->image && file_exists(public_path("storage/{$podcast->thumbnail}"))) {
+                unlink(public_path("storage/{$podcast->thumbnail}"));
+            }
+            $thumbnailPath = $request->file('thumbnail')->store('uploads', 'public');
+            $data['thumbnail'] = $thumbnailPath;
+        }
+        $podcast->update($data);
 
         return redirect()->route('podcasts.index')->with('success', 'Podcast updated successfully.');
     }

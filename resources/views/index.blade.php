@@ -2,7 +2,7 @@
 <html lang="en-US">
 
 <head>
-@vite(['resources/css/app.css', 'resources/js/app.jsx'])
+  @vite(['resources/css/app.css', 'resources/js/app.jsx'])
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
@@ -29,40 +29,46 @@
       },
     };
     /*! This file is auto-generated */
-    !(function (i, n) {
+    !(function(i, n) {
       var o, s, e;
+
       function c(e) {
         try {
-          var t = { supportTests: e, timestamp: new Date().valueOf() };
+          var t = {
+            supportTests: e,
+            timestamp: new Date().valueOf()
+          };
           sessionStorage.setItem(o, JSON.stringify(t));
-        } catch (e) { }
+        } catch (e) {}
       }
+
       function p(e, t, n) {
         e.clearRect(0, 0, e.canvas.width, e.canvas.height),
           e.fillText(t, 0, 0);
         var t = new Uint32Array(
-          e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
-        ),
+            e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
+          ),
           r =
-            (e.clearRect(0, 0, e.canvas.width, e.canvas.height),
-              e.fillText(n, 0, 0),
-              new Uint32Array(
-                e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
-              ));
-        return t.every(function (e, t) {
+          (e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+            e.fillText(n, 0, 0),
+            new Uint32Array(
+              e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
+            ));
+        return t.every(function(e, t) {
           return e === r[t];
         });
       }
+
       function u(e, t, n) {
         switch (t) {
           case "flag":
             return n(
-              e,
-              "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f",
-              "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f"
-            )
-              ? !1
-              : !n(
+                e,
+                "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f",
+                "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f"
+              ) ?
+              !1 :
+              !n(
                 e,
                 "\ud83c\uddfa\ud83c\uddf3",
                 "\ud83c\uddfa\u200b\ud83c\uddf3"
@@ -81,21 +87,25 @@
         }
         return !1;
       }
+
       function f(e, t, n) {
         var r =
           "undefined" != typeof WorkerGlobalScope &&
-            self instanceof WorkerGlobalScope
-            ? new OffscreenCanvas(300, 150)
-            : i.createElement("canvas"),
-          a = r.getContext("2d", { willReadFrequently: !0 }),
+          self instanceof WorkerGlobalScope ?
+          new OffscreenCanvas(300, 150) :
+          i.createElement("canvas"),
+          a = r.getContext("2d", {
+            willReadFrequently: !0
+          }),
           o = ((a.textBaseline = "top"), (a.font = "600 32px Arial"), {});
         return (
-          e.forEach(function (e) {
+          e.forEach(function(e) {
             o[e] = t(a, e, n);
           }),
           o
         );
       }
+
       function t(e) {
         var t = i.createElement("script");
         (t.src = e), (t.defer = !0), i.head.appendChild(t);
@@ -103,12 +113,17 @@
       "undefined" != typeof Promise &&
         ((o = "wpEmojiSettingsSupports"),
           (s = ["flag", "emoji"]),
-          (n.supports = { everything: !0, everythingExceptFlag: !0 }),
-          (e = new Promise(function (e) {
-            i.addEventListener("DOMContentLoaded", e, { once: !0 });
+          (n.supports = {
+            everything: !0,
+            everythingExceptFlag: !0
+          }),
+          (e = new Promise(function(e) {
+            i.addEventListener("DOMContentLoaded", e, {
+              once: !0
+            });
           })),
-          new Promise(function (t) {
-            var n = (function () {
+          new Promise(function(t) {
+            var n = (function() {
               try {
                 var e = JSON.parse(sessionStorage.getItem(o));
                 if (
@@ -118,7 +133,7 @@
                   "object" == typeof e.supportTests
                 )
                   return e.supportTests;
-              } catch (e) { }
+              } catch (e) {}
               return null;
             })();
             if (!n) {
@@ -133,49 +148,50 @@
                   var e =
                     "postMessage(" +
                     f.toString() +
-                    "(" +
-                    [JSON.stringify(s), u.toString(), p.toString()].join(
+                    "(" + [JSON.stringify(s), u.toString(), p.toString()].join(
                       ","
                     ) +
                     "));",
-                    r = new Blob([e], { type: "text/javascript" }),
+                    r = new Blob([e], {
+                      type: "text/javascript"
+                    }),
                     a = new Worker(URL.createObjectURL(r), {
                       name: "wpTestEmojiSupports",
                     });
-                  return void (a.onmessage = function (e) {
+                  return void(a.onmessage = function(e) {
                     c((n = e.data)), a.terminate(), t(n);
                   });
-                } catch (e) { }
+                } catch (e) {}
               c((n = f(s, u, p)));
             }
             t(n);
           })
-            .then(function (e) {
-              for (var t in e)
-                (n.supports[t] = e[t]),
-                  (n.supports.everything =
-                    n.supports.everything && n.supports[t]),
-                  "flag" !== t &&
-                  (n.supports.everythingExceptFlag =
-                    n.supports.everythingExceptFlag && n.supports[t]);
+          .then(function(e) {
+            for (var t in e)
+              (n.supports[t] = e[t]),
+              (n.supports.everything =
+                n.supports.everything && n.supports[t]),
+              "flag" !== t &&
               (n.supports.everythingExceptFlag =
-                n.supports.everythingExceptFlag && !n.supports.flag),
-                (n.DOMReady = !1),
-                (n.readyCallback = function () {
-                  n.DOMReady = !0;
-                });
-            })
-            .then(function () {
-              return e;
-            })
-            .then(function () {
-              var e;
-              n.supports.everything ||
-                (n.readyCallback(),
-                  (e = n.source || {}).concatemoji
-                    ? t(e.concatemoji)
-                    : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji)));
-            }));
+                n.supports.everythingExceptFlag && n.supports[t]);
+            (n.supports.everythingExceptFlag =
+              n.supports.everythingExceptFlag && !n.supports.flag),
+            (n.DOMReady = !1),
+            (n.readyCallback = function() {
+              n.DOMReady = !0;
+            });
+          })
+          .then(function() {
+            return e;
+          })
+          .then(function() {
+            var e;
+            n.supports.everything ||
+              (n.readyCallback(),
+                (e = n.source || {}).concatemoji ?
+                t(e.concatemoji) :
+                e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji)));
+          }));
     })((window, document), window._wpemojiSettings);
     /* ]]> */
   </script>
@@ -847,10 +863,8 @@
       ajax_url: "https://radiofreesom.com/wp-admin/admin-ajax.php",
       nonce: "da82d3c5fb",
       home_url: "https://radiofreesom.com/",
-      settings_icon:
-        "https://radiofreesom.com/wp-content/plugins/export-wp-page-to-static-html/admin/images/settings.png",
-      settings_hover_icon:
-        "https://radiofreesom.com/wp-content/plugins/export-wp-page-to-static-html/admin/images/settings_hover.png",
+      settings_icon: "https://radiofreesom.com/wp-content/plugins/export-wp-page-to-static-html/admin/images/settings.png",
+      settings_hover_icon: "https://radiofreesom.com/wp-content/plugins/export-wp-page-to-static-html/admin/images/settings_hover.png",
     };
     /* ]]\> */
   </script>
@@ -901,9 +915,9 @@
         e.tabhide = e.tabhide === undefined ? 0 : parseInt(e.tabhide);
         e.thumbhide = e.thumbhide === undefined ? 0 : parseInt(e.thumbhide);
         e.mh =
-          e.mh === undefined || e.mh == "" || e.mh === "auto"
-            ? 0
-            : parseInt(e.mh, 0);
+          e.mh === undefined || e.mh == "" || e.mh === "auto" ?
+          0 :
+          parseInt(e.mh, 0);
         if (e.layout === "fullscreen" || e.l === "fullscreen")
           newh = Math.max(e.mh, window.RSIH);
         else {
@@ -912,10 +926,10 @@
             if (e.gw[i] === undefined || e.gw[i] === 0) e.gw[i] = e.gw[i - 1];
           e.gh =
             e.el === undefined ||
-              e.el === "" ||
-              (Array.isArray(e.el) && e.el.length == 0)
-              ? e.gh
-              : e.el;
+            e.el === "" ||
+            (Array.isArray(e.el) && e.el.length == 0) ?
+            e.gh :
+            e.el;
           e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
           for (var i in e.rl)
             if (e.gh[i] === undefined || e.gh[i] === 0) e.gh[i] = e.gh[i - 1];
@@ -935,9 +949,9 @@
               ix = i;
             }
           var m =
-            pw > e.gw[ix] + e.tabw + e.thumbw
-              ? 1
-              : (pw - (e.tabw + e.thumbw)) / e.gw[ix];
+            pw > e.gw[ix] + e.tabw + e.thumbw ?
+            1 :
+            (pw - (e.tabw + e.thumbw)) / e.gw[ix];
           newh = e.gh[ix] * m + (e.tabh + e.thumbh);
         }
         if (window.rs_init_css === undefined)
@@ -956,6 +970,8 @@
   <style type="text/css" data-type="vc_shortcodes-custom-css">
     .vc_custom_1626273809983 {
       background-image: url("{{asset('images/background.jpg')}}") !important;
+      background-attachment: fixed;
+      height: 100% !important;
     }
   </style>
   <noscript>
@@ -1054,27 +1070,30 @@
                                     <div class="wpb_text_column wpb_content_element">
                                       <div class="wpb_wrapper">
                                         <p style="text-align: center"></p>
-                                        <div id="audioigniter-231" class="audioigniter-root" 
-                                        data-player-type="full"
-                                        data-tracks-url="{{env('APP_URL')}}/radio/audio" 
-                                        data-display-track-no="true"
-                                        data-reverse-track-order="false" 
-                                        data-display-tracklist-covers="true"
-                                        data-display-active-cover="true" 
-                                        data-display-artist-names="true"
-                                        data-display-buy-buttons="true" 
-                                        data-buy-buttons-target="false"
-                                        data-cycle-tracks="true" 
-                                        data-display-credits="false"
-                                        data-display-tracklist="false" 
-                                        data-allow-tracklist-toggle="false"
-                                        data-allow-tracklist-loop="false" 
-                                        data-limit-tracklist-height="true"
-                                        data-volume="100" 
-                                        data-tracklist-height="185"></div>
-                                        
+                                        <div id="audioigniter-231" class="audioigniter-root"
+                                          data-player-type="full"
+                                          data-tracks-url="{{env('APP_URL')}}/radio/audio"
+                                          data-display-track-no="true"
+                                          data-reverse-track-order="false"
+                                          data-display-tracklist-covers="true"
+                                          data-display-active-cover="true"
+                                          data-display-artist-names="true"
+                                          data-display-buy-buttons="true"
+                                          data-buy-buttons-target="false"
+                                          data-cycle-tracks="true"
+                                          data-display-credits="false"
+                                          data-display-tracklist="false"
+                                          data-allow-tracklist-toggle="false"
+                                          data-allow-tracklist-loop="false"
+                                          data-limit-tracklist-height="true"
+                                          data-volume="100"
+                                          data-tracklist-height="185">
+
+                                          ehllo world
+                                        </div>
+
                                       </div>
-                              
+
                                     </div>
                                   </div>
                                 </div>
@@ -1104,8 +1123,95 @@
                                         warqad aad ku codsanaysid noola soo
                                         xiriir emailka radiofreesom@gmail.com
                                       </div>
+                                      <style>
+                                        .podcast-container {
+                                          padding: 20px;
+                                          width: 100vw;
+                                          overflow-x: auto;
+                                          margin: auto;
+                                        }
+
+                                        .podcast-container h2 {
+                                          color: white;
+                                        }
+
+                                        .podcast-cards {
+                                          display: flex;
+                                          overflow-x: auto;
+                                          padding: 20px;
+                                        }
+
+                                        .podcast-card {
+                                          cursor: pointer;
+                                          transition: 1s;
+
+                                          &:hover {
+                                            scale: 0.95;
+                                          }
+
+                                          ;
+                                          min-width: 200px;
+                                          max-width: 200px;
+                                          margin-right: 16px;
+                                          background: #f0f0f0;
+                                          border-radius: 8px;
+                                          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                                          scroll-snap-align: start;
+                                          /* Aligns the card when scrolling */
+                                          text-align: center;
+                                          /* Centers text inside the card */
+                                        }
+
+                                        .podcast-card img {
+                                          width: 100%;
+                                          height: auto;
+                                          border-radius: 8px 8px 0 0;
+                                          aspect-ratio: 16 / 9;
+                                          object-fit: cover;
+                                        }
+
+                                        .podcast-card h3 {
+                                          padding: 5px 0;
+                                          font-size: 13px;
+                                          font-weight: bold;
+                                          /* Font size for title */
+                                        }
+                                        .podcast-card small {
+                                          padding: 5px 0;
+                                          font-size: 13px;
+                                          /* Font size for title */
+                                        }
+                                      </style>
+                                      @if ($podcasts->count()>0)
+
+                                      <div class="podcast-container">
+                                        <h2>Podcasts</h2>
+                                        <div class="podcast-cards">
+                                          @foreach ( $podcasts as $podcast )
+                                          <div class="podcast-card">
+                                            <a href="{{$podcast->link}}" target="_blank">
+                                              <img src="{{ asset('storage/' . $podcast->thumbnail) }}" alt="{{ $podcast->title }} Thumbnail ">
+                                              <h3>{{$podcast->title}}</h3>
+                                              <small>Share on :<a href="https://wa.me/?text=Check%20out%20this%20podcast%20%22{{ urlencode($podcast->title) }}%22.%20Listen%20here%3A%20{{ urlencode($podcast->link) }}"
+                                                target="_blank"
+                                                class="font-medium text-blue-600 dark:text-blue-500 hover:text-blue-700 hover:underline">
+                                                <i class="bi bi-whatsapp"></i>
+                                              </a>
+                                              <a href="https://web.skype.com/share?url={{ urlencode($podcast->link) }}"
+                                                target="_blank"
+                                                class="font-medium text-blue-600 dark:text-blue-500 hover:text-blue-700 hover:underline">
+                                                <i class="bi bi-skype"></i>
+                                              </a></small>
+                                            </a>
+                                          </div>
+                                          @endforeach
+                                        </div>
+                                      </div>
+                                      @endif
+
+
                                       <script>
-                                        jQuery(function () {
+                                        jQuery(function() {
                                           jQuery(
                                             ".marquee-hsas-shortcode-24"
                                           ).marquee({
@@ -1333,9 +1439,9 @@
     </div>
   </div>
   <script>
-    jQuery(document).ready(function ($) {
+    jQuery(document).ready(function($) {
       if ($(".audioigniter-root").length > 0) {
-        setTimeout(function () {
+        setTimeout(function() {
           var winH = $(window).height();
           var objH = $(".audioigniter-root").height();
           var margin = winH - objH;
@@ -1351,11 +1457,10 @@
         }, 2000);
       }
 
-      $("a.scroll").click(function (e) {
+      $("a.scroll").click(function(e) {
         e.preventDefault();
         var target = $(this).attr("href");
-        $("html, body").animate(
-          {
+        $("html, body").animate({
             scrollTop: $(target).offset().top,
           },
           1000
@@ -1370,7 +1475,10 @@
   <script type="text/javascript" id="contact-form-7-js-extra">
     /* <![CDATA[ */
     var wpcf7 = {
-      api: { root: "./wp-json\/", namespace: "contact-form-7\/v1" },
+      api: {
+        root: "./wp-json\/",
+        namespace: "contact-form-7\/v1"
+      },
     };
     /* ]]> */
   </script>
@@ -1405,7 +1513,9 @@
   <script type="text/javascript" src="./js/dist-i18n.min.js" id="wp-i18n-js"></script>
   <script type="text/javascript" id="wp-i18n-js-after">
     /* <![CDATA[ */
-    wp.i18n.setLocaleData({ "text direction\u0004ltr": ["ltr"] });
+    wp.i18n.setLocaleData({
+      "text direction\u0004ltr": ["ltr"]
+    });
     /* ]]> */
   </script>
   <script type="text/javascript" src="./js/dist-a11y.min.js" id="wp-a11y-js"></script>
@@ -1414,8 +1524,7 @@
     var uiAutocompleteL10n = {
       noResults: "No results found.",
       oneResult: "1 result found. Use up and down arrow keys to navigate.",
-      manyResults:
-        "%d results found. Use up and down arrow keys to navigate.",
+      manyResults: "%d results found. Use up and down arrow keys to navigate.",
       itemSelected: "Item selected.",
     };
     /* ]]> */
@@ -1427,7 +1536,7 @@
   <script type="text/javascript" src="./js/jquery-ui-datepicker.min.js" id="jquery-ui-datepicker-js"></script>
   <script type="text/javascript" id="jquery-ui-datepicker-js-after">
     /* <![CDATA[ */
-    jQuery(function (jQuery) {
+    jQuery(function(jQuery) {
       jQuery.datepicker.setDefaults({
         closeText: "Close",
         currentText: "Today",
@@ -1522,17 +1631,14 @@
       language: "en",
       strings: {
         "mejs.download-file": "Download File",
-        "mejs.install-flash":
-          "You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/",
+        "mejs.install-flash": "You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/",
         "mejs.fullscreen": "Fullscreen",
         "mejs.play": "Play",
         "mejs.pause": "Pause",
         "mejs.time-slider": "Time Slider",
-        "mejs.time-help-text":
-          "Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.",
+        "mejs.time-help-text": "Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.",
         "mejs.live-broadcast": "Live Broadcast",
-        "mejs.volume-help-text":
-          "Use Up\/Down Arrow keys to increase or decrease volume.",
+        "mejs.volume-help-text": "Use Up\/Down Arrow keys to increase or decrease volume.",
         "mejs.unmute": "Unmute",
         "mejs.mute": "Mute",
         "mejs.volume-slider": "Volume Slider",
@@ -1653,7 +1759,9 @@
   <script type="text/javascript" src="./js/cs-js-default_dynamic.js" id="bridge-default-dynamic-js"></script>
   <script type="text/javascript" id="bridge-default-js-extra">
     /* <![CDATA[ */
-    var QodeAdminAjax = { ajaxurl: "./wp-admin\/admin-ajax.php" };
+    var QodeAdminAjax = {
+      ajaxurl: "./wp-admin\/admin-ajax.php"
+    };
     var qodeGlobalVars = {
       vars: {
         qodeAddingToCartLabel: "Adding to Cart...",
@@ -1669,7 +1777,9 @@
     id="wpb_composer_front_js-js"></script>
   <script type="text/javascript" id="qode-like-js-extra">
     /* <![CDATA[ */
-    var qodeLike = { ajaxurl: "./wp-admin\/admin-ajax.php" };
+    var qodeLike = {
+      ajaxurl: "./wp-admin\/admin-ajax.php"
+    };
     /* ]]> */
   </script>
   <script type="text/javascript" src="./js/cs-js-plugins-qode-like.min.js" id="qode-like-js"></script>
@@ -1713,16 +1823,16 @@
   <script src='{{asset("agora/AgoraRTC_N-4.20.1.js")}}'></script>
   <script src='{{asset("agora/index.js")}}'></script>
   <script>
-  //    function checkAriaPressed() {
-  //   var ariaPressedValue = this.getAttribute('aria-pressed');
-  //   alert('aria-pressed value is ' + ariaPressedValue);
-  // }
+    //    function checkAriaPressed() {
+    //   var ariaPressedValue = this.getAttribute('aria-pressed');
+    //   alert('aria-pressed value is ' + ariaPressedValue);
+    // }
 
-  // // Get the element by class name
-  // var audioControl = document.querySelector('.ai-audio-control');
+    // // Get the element by class name
+    // var audioControl = document.querySelector('.ai-audio-control');
 
-  // // Attach the click event listener
-  // audioControl.addEventListener('click', checkAriaPressed);
+    // // Attach the click event listener
+    // audioControl.addEventListener('click', checkAriaPressed);
   </script>
 </body>
 

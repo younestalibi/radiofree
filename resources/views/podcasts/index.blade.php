@@ -61,7 +61,7 @@
                                 <img src="{{ asset('storage/' . $podcast->thumbnail) }}" style="width:100px;height:100px;object-fit:contain" alt="Thumbnail Image">
                             </td>
                             <td class="px-6 py-4">
-                                <a href="{{ $podcast->link }}" target="_blank" class="text-blue-600 dark:text-blue-500 hover:underline">{{ $podcast->link }}</a>
+                                <a href="{{ $podcast->link }}" target="_blank" class="text-blue-600 dark:text-blue-500 hover:underline">Link</a>
                             </td>
                             <td class="px-6 py-4">
                                 {{ $podcast->created_at }}

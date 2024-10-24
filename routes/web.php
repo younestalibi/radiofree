@@ -7,6 +7,7 @@ use Illuminate\Foundation\Application;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\PodcastController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Podcast;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +25,9 @@ use App\Http\Controllers\ProfileController;
 // });
 Route::get('/', function () {
     $activeRoom = Room::where('status', 'active')->first();
-    return view('index', compact('activeRoom'));
+    $podcasts = Podcast::all();
+
+    return view('index', compact('activeRoom','podcasts'));
 });
 Route::get('/media', function () {
     $activeRoom = Room::where('status', 'active')->first();
