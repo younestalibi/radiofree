@@ -106,8 +106,8 @@
             <div class="bg-white p-2 rounded shadow">
                 <h2 class="text-xl font-bold mb-2">Podcasts</h2>
                 @if ($podcasts->count()>0)
-                @foreach ( $podcasts as $podcast )
                 <div style="max-height: 300px; overflow-x:auto;">
+                    @foreach ( $podcasts as $podcast )
                     <div class="flex mb-4 justify-start gap-3 ">
                         <img style="aspect-ratio: 16/9;" class=" object-cover w-1/2" src="{{ asset('storage/' . $podcast->thumbnail) }}" alt="{{ $podcast->title }} Thumbnail ">
                         <div class="flex flex-col justify-start  w-full ">
@@ -129,8 +129,8 @@
                                 </a></small>
                         </div>
                     </div>
+                    @endforeach
                 </div>
-                @endforeach
             </div>
         </div>
         @endif
