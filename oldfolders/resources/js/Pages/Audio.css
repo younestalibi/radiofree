@@ -1,0 +1,44 @@
+.container-audio{
+    height: 80vh;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+}
+.container-audio  .logo{
+    background-color:black;
+    padding:20px;
+    color:red;
+    font-size:17px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center
+}
+marquee{
+    color:white;
+    font-size:20px;
+    background:black
+}
+.navigate-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    width:30px;
+    height:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  
+  /* You can add hover effects or other styles as needed */
+  .navigate-button:hover {
+    background-color: #45a049;
+  }
+  
